@@ -4,19 +4,32 @@ import { SmoothScroll } from '@/components/SmoothScroll'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Saffron & Co — Indian-Fusion Caf\u00e9 & Bar | Fitzroy, Melbourne',
+  metadataBase: new URL('https://saffronand.co'),
+  title: 'Saffron & Co \u2014 Indian-Fusion Caf\u00e9 & Bar | Fitzroy, Melbourne',
   description:
     'Where chai meets Melbourne. Indian-fusion caf\u00e9 and bar in Fitzroy. Turmeric lattes, masala eggs, weekend biryani. Tues\u2013Sun.',
   openGraph: {
-    title: 'Saffron & Co — Indian-Fusion Caf\u00e9 & Bar | Fitzroy, Melbourne',
+    title: 'Saffron & Co \u2014 Indian-Fusion Caf\u00e9 & Bar | Fitzroy, Melbourne',
     description:
       'Where chai meets Melbourne. Indian-fusion caf\u00e9 and bar in Fitzroy. Turmeric lattes, masala eggs, weekend biryani. Tues\u2013Sun.',
     type: 'website',
     locale: 'en_AU',
     siteName: 'Saffron & Co',
+    images: [
+      {
+        url: '/og-image.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Saffron & Co \u2014 Indian-Fusion Caf\u00e9 & Bar | Fitzroy, Melbourne',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
+    images: ['/og-image.svg'],
+  },
+  icons: {
+    icon: '/favicon.svg',
   },
 }
 
@@ -26,15 +39,16 @@ const jsonLd = {
   name: 'Saffron & Co',
   description:
     'Indian-fusion caf\u00e9 and bar in Fitzroy, Melbourne. Turmeric lattes, masala eggs, weekend biryani.',
+  url: 'https://saffronand.co',
+  telephone: '0401 234 567',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '87 Brunswick St',
+    streetAddress: '87 Brunswick Street',
     addressLocality: 'Fitzroy',
     addressRegion: 'VIC',
     postalCode: '3065',
     addressCountry: 'AU',
   },
-  telephone: '0401 234 567',
   servesCuisine: ['Indian', 'Fusion', 'Australian'],
   priceRange: '$$',
   openingHoursSpecification: [
@@ -57,7 +71,6 @@ const jsonLd = {
       closes: '16:00',
     },
   ],
-  url: 'https://saffronandco.com.au',
 }
 
 export default function RootLayout({
@@ -74,7 +87,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${playfair.variable} ${dmSans.variable} ${spaceMono.variable} bg-bg-deep text-text-cream font-dm-sans antialiased`}
+        className={`${playfair.variable} ${dmSans.variable} ${spaceMono.variable} bg-bg-deep text-text-cream font-dm-sans antialiased overflow-x-hidden`}
       >
         <SmoothScroll />
         <a

@@ -67,14 +67,14 @@ export function Navigation() {
       <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 lg:px-12 py-6">
         <a
           href="#"
-          className="font-oi text-text-cream tracking-[0.05em] text-lg lg:text-xl"
+          className="font-oi text-text-cream tracking-[0.05em] text-lg lg:text-xl cursor-pointer"
         >
           Saffron &amp; Co
         </a>
         <button
           onClick={() => setIsOpen(true)}
           aria-label="Open menu"
-          className="flex flex-col gap-[6px] group"
+          className="flex flex-col gap-[6px] group cursor-pointer"
         >
           <span className="block w-6 h-[2px] bg-text-cream transition-colors group-hover:bg-accent-turmeric" />
           <span className="block w-6 h-[2px] bg-text-cream transition-colors group-hover:bg-accent-turmeric" />
@@ -102,7 +102,7 @@ export function Navigation() {
               <button
                 onClick={() => setIsOpen(false)}
                 aria-label="Close menu"
-                className="text-text-cream hover:text-accent-turmeric transition-colors"
+                className="text-text-cream hover:text-accent-turmeric transition-colors cursor-pointer"
               >
                 <X size={24} />
               </button>
@@ -120,7 +120,7 @@ export function Navigation() {
                   <motion.li key={link.href} variants={navLink}>
                     <button
                       onClick={() => handleNavClick(link.href)}
-                      className="font-playfair text-[clamp(2.25rem,5vw,3.5rem)] text-text-cream hover:text-accent-turmeric transition-colors"
+                      className="font-playfair text-[clamp(2.25rem,5vw,3.5rem)] text-text-cream hover:text-accent-turmeric transition-colors cursor-pointer"
                     >
                       {link.label}
                     </button>
@@ -137,7 +137,7 @@ export function Navigation() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="text-text-muted hover:text-text-cream transition-colors"
+                  className="text-text-muted hover:text-text-cream transition-colors cursor-pointer"
                 >
                   <Instagram size={20} />
                 </a>
@@ -146,7 +146,7 @@ export function Navigation() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  className="text-text-muted hover:text-text-cream transition-colors"
+                  className="text-text-muted hover:text-text-cream transition-colors cursor-pointer"
                 >
                   <Facebook size={20} />
                 </a>

@@ -36,7 +36,7 @@ export function MenuCard({
       whileInView="visible"
       viewport={{ once: true, margin: '-60px' }}
       transition={{ delay: index * 0.1 }}
-      className="group relative bg-bg-warm rounded-xl overflow-hidden cursor-default"
+      className="group relative bg-bg-warm rounded-xl overflow-hidden cursor-pointer"
       style={{
         transition: 'transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease',
       }}

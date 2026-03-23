@@ -75,7 +75,7 @@ export function Details() {
                   <a
                     key={detail.label}
                     href={detail.href}
-                    className="flex items-center gap-3 py-2 text-text-cream hover:underline transition-colors"
+                    className="flex items-center gap-3 py-2 text-text-cream hover:underline transition-colors cursor-pointer"
                     target={detail.icon === 'instagram' ? '_blank' : undefined}
                     rel={detail.icon === 'instagram' ? 'noopener noreferrer' : undefined}
                   >
@@ -111,7 +111,7 @@ export function Details() {
                 />
                 <button
                   type="submit"
-                  className="w-10 h-10 rounded-full bg-accent-turmeric flex items-center justify-center hover:brightness-110 transition"
+                  className="w-10 h-10 rounded-full bg-accent-turmeric flex items-center justify-center hover:brightness-110 transition cursor-pointer"
                   aria-label="Subscribe"
                 >
                   <ArrowRight size={18} className="text-bg-deep" />
@@ -154,7 +154,7 @@ export function Details() {
                 />
                 <button
                   type="submit"
-                  className="w-full bg-accent-turmeric text-bg-deep font-medium rounded-lg py-3 mt-4 hover:brightness-110 transition"
+                  className="w-full bg-accent-turmeric text-bg-deep font-medium rounded-lg py-3 mt-4 hover:brightness-110 transition cursor-pointer"
                 >
                   Send it.
                 </button>

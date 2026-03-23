@@ -18,12 +18,14 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
+            className="cursor-pointer"
           >
             <Instagram size={20} className="text-text-muted hover:text-text-cream transition-colors" />
           </a>
           <a
             href="#"
             aria-label="Facebook"
+            className="cursor-pointer"
           >
             <Facebook size={20} className="text-text-muted hover:text-text-cream transition-colors" />
           </a>
@@ -36,7 +38,7 @@ export function Footer() {
             href="https://pixelpundit.dev"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-dm-sans text-[13px] text-accent-turmeric hover:underline"
+            className="font-dm-sans text-[13px] text-accent-turmeric hover:underline cursor-pointer"
           >
             Website by Pixel Pundit
           </a>

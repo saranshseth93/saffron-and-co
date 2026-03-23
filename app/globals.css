@@ -16,6 +16,7 @@
   --font-family-playfair: var(--font-playfair);
   --font-family-dm-sans: var(--font-dm-sans);
   --font-family-space-mono: var(--font-space-mono);
+  --font-family-oi: var(--font-oi);
 
   --animate-clip-reveal: clipReveal 0.8s ease-out forwards;
   --animate-slow-rotate: slowRotate 20s linear infinite;

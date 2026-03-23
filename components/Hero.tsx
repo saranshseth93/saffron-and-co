@@ -103,7 +103,7 @@ export function Hero() {
         <h1>
           <motion.span
             data-hero-line="1"
-            className="block font-playfair font-bold text-[clamp(3rem,8vw,6rem)] text-text-cream"
+            className="block font-playfair font-bold text-[clamp(3rem,8vw,6rem)] text-text-cream will-change-transform"
             initial={clipInitial}
             animate={clipAnimate}
             transition={
@@ -116,7 +116,7 @@ export function Hero() {
           </motion.span>
           <motion.span
             data-hero-line="2"
-            className="block font-playfair font-bold text-[clamp(3rem,8vw,6rem)] text-text-cream"
+            className="block font-playfair font-bold text-[clamp(3rem,8vw,6rem)] text-text-cream will-change-transform"
             initial={clipInitial}
             animate={clipAnimate}
             transition={

@@ -6,7 +6,7 @@ export function Footer() {
       <div className="max-w-2xl mx-auto text-center flex flex-col items-center">
 
         {/* Wordmark */}
-        <p className="font-playfair text-2xl text-text-cream tracking-[0.15em]">SAFFRON & CO</p>
+        <p className="font-oi text-2xl text-text-cream tracking-[0.15em]">Saffron & Co</p>
 
         {/* Tagline */}
         <p className="font-dm-sans text-text-spice italic mt-2">Where chai meets Melbourne.</p>

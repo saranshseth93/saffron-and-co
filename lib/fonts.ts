@@ -1,4 +1,4 @@
-import { Playfair_Display, DM_Sans, Space_Mono } from 'next/font/google'
+import { Playfair_Display, DM_Sans, Space_Mono, Oi } from 'next/font/google'
 
 export const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -18,5 +18,12 @@ export const spaceMono = Space_Mono({
   subsets: ['latin'],
   weight: ['400'],
   variable: '--font-space-mono',
+  display: 'swap',
+})
+
+export const oiFont = Oi({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-oi',
   display: 'swap',
 })

@@ -67,9 +67,9 @@ export function Navigation() {
       <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 lg:px-12 py-6">
         <a
           href="#"
-          className="font-playfair text-text-cream tracking-[0.2em] uppercase text-sm lg:text-base font-bold"
+          className="font-oi text-text-cream tracking-[0.2em] text-sm lg:text-base"
         >
-          SAFFRON &amp; CO
+          Saffron &amp; Co
         </a>
         <button
           onClick={() => setIsOpen(true)}

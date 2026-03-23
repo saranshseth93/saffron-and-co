@@ -42,7 +42,7 @@ export function ParallaxQuote() {
       <div className="max-w-4xl mx-auto text-center">
         <Reveal>
           <div ref={lineTopRef} className="h-px w-32 bg-accent-turmeric mx-auto mb-12" />
-          <blockquote ref={quoteRef} className="font-playfair italic text-[clamp(1.75rem,4vw,3.25rem)] text-text-cream leading-snug">
+          <blockquote ref={quoteRef} className="font-playfair italic text-[clamp(1.75rem,4vw,3.25rem)] text-text-cream leading-snug will-change-transform">
             "We cook the way we grew up eating — a little bit of everything, all at once, and always with too much flavour."
           </blockquote>
           <div ref={lineBottomRef} className="h-px w-32 bg-accent-turmeric mx-auto mt-12" />

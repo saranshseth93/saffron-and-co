@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { playfair, dmSans, spaceMono } from '@/lib/fonts'
+import { playfair, dmSans, spaceMono, oiFont } from '@/lib/fonts'
 import { SmoothScroll } from '@/components/SmoothScroll'
 import './globals.css'
 
@@ -87,7 +87,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${playfair.variable} ${dmSans.variable} ${spaceMono.variable} bg-bg-deep text-text-cream font-dm-sans antialiased overflow-x-hidden`}
+        className={`${playfair.variable} ${dmSans.variable} ${spaceMono.variable} ${oiFont.variable} bg-bg-deep text-text-cream font-dm-sans antialiased overflow-x-hidden`}
       >
         <SmoothScroll />
         <a

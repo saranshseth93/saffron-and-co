@@ -16,12 +16,14 @@ export function useLenis() {
 
     const lenis = new Lenis({
       duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     })
 
     lenisInstance = lenis
 
-    // Sync Lenis with GSAP ScrollTrigger
+    let gsapAvailable = false
+
+    // Try to sync with GSAP ticker (preferred — single update loop)
     async function syncGSAP() {
       try {
         const { gsap } = await import('gsap')
@@ -29,17 +31,20 @@ export function useLenis() {
         gsap.registerPlugin(ScrollTrigger)
 
         lenis.on('scroll', ScrollTrigger.update)
-        gsap.ticker.add((time) => lenis.raf(time * 1000))
+        gsap.ticker.add((time: number) => lenis.raf(time * 1000))
         gsap.ticker.lagSmoothing(0)
+        gsapAvailable = true
       } catch {
-        // GSAP not available — Lenis still works standalone
+        // GSAP not available — use standalone RAF
       }
     }
     syncGSAP()
 
-    // Fallback RAF loop if GSAP ticker isn't driving Lenis
+    // Standalone RAF loop — ONLY if GSAP isn't driving Lenis
     function raf(time: number) {
-      lenis.raf(time)
+      if (!gsapAvailable) {
+        lenis.raf(time)
+      }
       requestAnimationFrame(raf)
     }
     requestAnimationFrame(raf)

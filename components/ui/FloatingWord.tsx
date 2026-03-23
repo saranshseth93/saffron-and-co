@@ -41,7 +41,7 @@ export function FloatingWord({ word, style }: FloatingWordProps) {
   return (
     <span
       ref={ref}
-      className="absolute font-playfair italic text-text-muted pointer-events-none select-none"
+      className="absolute font-playfair italic text-text-muted pointer-events-none select-none will-change-transform"
       style={style}
       aria-hidden="true"
     >

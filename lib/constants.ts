@@ -111,16 +111,16 @@ export const drinkItems: DrinkItem[] = [
 ]
 
 export const introParagraphs: string[] = [
-  "We're the neighbourhood spot where turmeric lattes meet natural wine, where your nani's recipes get the Melbourne treatment.",
-  "Part caf\u00e9, part bar, part love letter to the spices we grew up with. Open Tuesday to Sunday in the heart of Fitzroy.",
-  'No reservations. No pretension. Just really good food with a bit of soul.',
+  'We didn\u2019t open Saffron & Co because Melbourne needed another caf\u00e9. We opened it because we were tired of choosing between our cultures.',
+  'This is where your amma\u2019s chai recipe meets single-origin Melbourne coffee. Where masala scrambled eggs sit next to smashed avo. Where a dosa can be your Tuesday breakfast and nobody thinks that\u2019s unusual.',
+  'We cook the way second-gen kids actually eat \u2014 with one foot in our parents\u2019 kitchen and another in Brunswick Street.',
 ]
 
 export const storyParagraphs: string[] = [
-  "Priya grew up in her amma's kitchen in Chennai, grinding spices before school. Arjun grew up in his dad's pub kitchen in Collingwood, learning to flip eggs at six.",
-  'They met at a wine bar on Smith Street. She ordered a masala chai. He made her one with oat milk and cardamom. She said it was almost as good as her mum\u2019s.',
-  "Saffron & Co opened in 2022 in a converted boot factory on Brunswick Street. The menu is what happens when two food cultures collide \u2014 respectfully, deliciously, and with a lot of ghee.",
-  "We don't do fusion for the sake of it. Every dish has a story, a family recipe, a reason. We just happen to serve it with sourdough and natural wine.",
+  'Priya grew up watching her mum make chai every morning \u2014 whole spices, fresh ginger, the works. By 16, she was also pulling shots at a Fitzroy caf\u00e9 and arguing about single-origin beans.',
+  'Arjun\u2019s thing was bread. Naan at home. Sourdough at work. He spent five years baking at three different Melbourne bakeries before deciding that tandoori and sourdough weren\u2019t as different as people thought.',
+  'They met at a Diwali party in Northcote. Bonded over the fact that both their families thought their cooking was \u2018too experimental.\u2019 Saffron & Co opened eight months later.',
+  'The menu changes constantly because Priya and Arjun cook what they actually want to eat \u2014 which is never the same thing two weeks in a row. The chai recipe, though? That doesn\u2019t change. That\u2019s amma\u2019s.',
 ]
 
 export const pressNames: string[] = [
@@ -133,17 +133,17 @@ export const pressNames: string[] = [
 ]
 
 export const hours: HoursEntry[] = [
-  { days: 'Tuesday \u2013 Thursday', hours: '7:30am \u2013 4pm' },
-  { days: 'Friday \u2013 Saturday', hours: '7:30am \u2013 4pm' },
-  { days: 'Friday \u2013 Saturday', hours: 'Bar: 5pm \u2013 10pm', highlight: true },
-  { days: 'Sunday', hours: '8am \u2013 4pm' },
+  { days: 'Tues\u2013Thu', hours: '7am \u2013 4pm' },
+  { days: 'Fri\u2013Sat', hours: '7am \u2013 4pm \u00b7 Bar 5pm \u2013 10pm', highlight: true },
+  { days: 'Sunday', hours: '8am \u2013 3pm' },
+  { days: 'Monday', hours: 'Closed (we\u2019re human)' },
 ]
 
 export const contactDetails: ContactDetail[] = [
   {
     icon: 'mail',
-    label: 'hello@saffronandco.com.au',
-    href: 'mailto:hello@saffronandco.com.au',
+    label: 'hello@saffronand.co',
+    href: 'mailto:hello@saffronand.co',
   },
   {
     icon: 'instagram',

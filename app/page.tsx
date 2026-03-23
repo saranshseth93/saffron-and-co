@@ -6,6 +6,9 @@ import { MenuHighlights } from '@/components/MenuHighlights'
 import { ParallaxQuote } from '@/components/ParallaxQuote'
 import { TheBar } from '@/components/TheBar'
 import { OurStory } from '@/components/OurStory'
+import { InstagramStrip } from '@/components/InstagramStrip'
+import { Details } from '@/components/Details'
+import { Footer } from '@/components/Footer'
 
 export default function Home() {
   return (
@@ -18,6 +21,9 @@ export default function Home() {
       <ParallaxQuote />
       <TheBar />
       <OurStory />
+      <InstagramStrip />
+      <Details />
+      <Footer />
     </>
   )
 }

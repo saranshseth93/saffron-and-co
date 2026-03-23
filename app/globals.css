@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@import "lenis/dist/lenis.css";
+
+@theme {
+  --color-bg-deep: #0C0A08;
+  --color-bg-rich: #1A1510;
+  --color-bg-warm: #241E16;
+  --color-text-cream: #F5EDE0;
+  --color-text-spice: #C4A882;
+  --color-text-muted: #7A6E60;
+  --color-accent-turmeric: #E8A838;
+  --color-accent-chilli: #C73E1D;
+  --color-accent-sage: #7B8F6A;
+  --color-border: #2E2820;
+
+  --font-family-playfair: var(--font-playfair);
+  --font-family-dm-sans: var(--font-dm-sans);
+  --font-family-space-mono: var(--font-space-mono);
+
+  --animate-clip-reveal: clipReveal 0.8s ease-out forwards;
+  --animate-slow-rotate: slowRotate 20s linear infinite;
+  --animate-bounce-down: bounceDown 2s ease-in-out infinite;
+}
+
+@keyframes clipReveal {
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+
+@keyframes slowRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounceDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* Grain overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-name: none !important;
+  }
+}

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { playfair, dmSans, spaceMono } from '@/lib/fonts'
+import { SmoothScroll } from '@/components/SmoothScroll'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -75,6 +76,7 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${dmSans.variable} ${spaceMono.variable} bg-bg-deep text-text-cream font-dm-sans antialiased`}
       >
+        <SmoothScroll />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-accent-turmeric focus:text-bg-deep focus:px-4 focus:py-2 focus:rounded"

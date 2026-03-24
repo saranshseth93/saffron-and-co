@@ -4,13 +4,15 @@ import { Fragment } from 'react'
 import Image from 'next/image'
 import { Reveal } from '@/components/ui/Reveal'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
 const pressLogos = [
-  { name: 'Broadsheet', src: '/press/broadsheet.svg', width: 130, height: 24 },
-  { name: 'TimeOut Melbourne', src: '/press/timeout.svg', width: 120, height: 24 },
-  { name: 'The Age', src: '/press/theage.svg', width: 90, height: 24 },
-  { name: 'Good Food', src: '/press/goodfood.svg', width: 120, height: 24 },
-  { name: 'Concrete Playground', src: '/press/concreteplayground.svg', width: 170, height: 20 },
-  { name: 'Eater', src: '/press/eater.svg', width: 80, height: 24 },
+  { name: 'Broadsheet', src: `${basePath}/press/broadsheet.svg`, width: 130, height: 24 },
+  { name: 'TimeOut Melbourne', src: `${basePath}/press/timeout.svg`, width: 120, height: 24 },
+  { name: 'The Age', src: `${basePath}/press/theage.svg`, width: 90, height: 24 },
+  { name: 'Good Food', src: `${basePath}/press/goodfood.svg`, width: 120, height: 24 },
+  { name: 'Concrete Playground', src: `${basePath}/press/concreteplayground.svg`, width: 170, height: 20 },
+  { name: 'Eater', src: `${basePath}/press/eater.svg`, width: 80, height: 24 },
 ]
 
 export function PressStrip() {

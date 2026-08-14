@@ -45,7 +45,7 @@ const ASPECT_TOLERANCE = 0.45
  * by another slot on this site.
  */
 function pick(candidates, slot, taken) {
-  const minWidth = slot.minWidth ?? 1600
+  const minWidth = slot.minWidth ?? 1200
   const targetAspect = slot.aspect ?? null
 
   return (
@@ -123,7 +123,7 @@ for (const slot of slots) {
   if (!chosen) {
     failures.push(
       `${slot.id}: no candidate for "${slot.query}" met minWidth ` +
-        `${slot.minWidth ?? 1600}px (${candidates.length} returned)`
+        `${slot.minWidth ?? 1200}px (${candidates.length} returned)`
     )
     continue
   }

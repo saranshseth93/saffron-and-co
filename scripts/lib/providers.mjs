@@ -78,14 +78,18 @@ export async function searchPexels({ query, orientation, count = 40, key }) {
 export async function searchOpenverse({ query, orientation, count = 40 }) {
   const url = new URL('https://api.openverse.org/v1/images/')
   url.searchParams.set('q', query)
-  // CC0 and public-domain mark only. Nothing here carries a share-alike or
-  // non-commercial term that a client site could trip over.
-  url.searchParams.set('license', 'cc0,pdm')
+  // CC0 and public domain, plus CC-BY. Attribution is generated automatically
+  // into CREDITS.md, so BY costs us nothing; share-alike and non-commercial
+  // stay excluded because a client site should never inherit those terms.
+  //
+  // Restricting to cc0,pdm alone leaves the corpus far too thin: a first run
+  // returned zero candidates for nine of twelve slots.
+  url.searchParams.set('license', 'cc0,pdm,by')
   url.searchParams.set('page_size', String(Math.min(count, 20)))
   url.searchParams.set('mature', 'false')
-  if (orientation === 'landscape') url.searchParams.set('aspect_ratio', 'wide')
-  if (orientation === 'portrait') url.searchParams.set('aspect_ratio', 'tall')
-  if (orientation === 'square') url.searchParams.set('aspect_ratio', 'square')
+  // Deliberately no aspect_ratio filter. Every slot is cropped to its own
+  // aspect at build time anyway, so filtering here only shrinks an already
+  // small result set.
 
   const json = await getJson(url.href)
 

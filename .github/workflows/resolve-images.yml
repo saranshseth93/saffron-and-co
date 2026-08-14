@@ -1,0 +1,71 @@
+name: Resolve images
+
+# Pins a real royalty-free photo to every slot and commits the result.
+#
+# This runs on a GitHub runner because it is the only place in the toolchain
+# with outbound access to the photo providers. It writes back images.lock.json,
+# CREDITS.md and a contact sheet, so the chosen photos can be reviewed in the
+# repo without needing to reach the provider at all.
+
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Re-pin every slot, even ones already pinned'
+        type: boolean
+        default: false
+  push:
+    branches: ['claude/**']
+    paths:
+      - 'images.config.mjs'
+      - 'scripts/**'
+      - '.github/workflows/resolve-images.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: resolve-images-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Pin photos
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: pnpm images:resolve ${{ inputs.force && '--force' || '' }}
+
+      - name: Download and build derivatives
+        run: pnpm images:build
+
+      - name: Verify every slot is real and credited
+        run: pnpm images:verify
+
+      - name: Build contact sheet
+        run: node scripts/images-contact-sheet.mjs
+
+      - name: Commit
+        run: |
+          if git diff --quiet -- images.lock.json CREDITS.md docs/contact-sheet.webp; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add images.lock.json CREDITS.md docs/contact-sheet.webp
+          git commit -m "chore(images): pin royalty-free photos and refresh credits"
+          git push origin HEAD:${{ github.ref_name }}

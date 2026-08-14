@@ -3,24 +3,26 @@ import { playfair, dmSans, spaceMono, oiFont } from '@/lib/fonts'
 import { SmoothScroll } from '@/components/SmoothScroll'
 import './globals.css'
 
+const title = 'Saffron & Co — Indian-Fusion Café & Bar (Demo Site)'
+const description =
+  'Where chai meets Melbourne. A fictional Fitzroy café, designed and built by Pixel Pundit as a portfolio piece. Not a real business.'
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://saffronand.co'),
-  title: 'Saffron & Co \u2014 Indian-Fusion Caf\u00e9 & Bar | Fitzroy, Melbourne',
-  description:
-    'Where chai meets Melbourne. Indian-fusion caf\u00e9 and bar in Fitzroy. Turmeric lattes, masala eggs, weekend biryani. Tues\u2013Sun.',
+  title,
+  description,
   openGraph: {
-    title: 'Saffron & Co \u2014 Indian-Fusion Caf\u00e9 & Bar | Fitzroy, Melbourne',
-    description:
-      'Where chai meets Melbourne. Indian-fusion caf\u00e9 and bar in Fitzroy. Turmeric lattes, masala eggs, weekend biryani. Tues\u2013Sun.',
+    title,
+    description,
     type: 'website',
     locale: 'en_AU',
-    siteName: 'Saffron & Co',
+    siteName: 'Saffron & Co (demo site)',
     images: [
       {
         url: '/og-image.svg',
         width: 1200,
         height: 630,
-        alt: 'Saffron & Co \u2014 Indian-Fusion Caf\u00e9 & Bar | Fitzroy, Melbourne',
+        alt: 'Saffron & Co — a fictional Indian-fusion café, built as a portfolio demo',
       },
     ],
   },
@@ -33,45 +35,14 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Restaurant',
-  name: 'Saffron & Co',
-  description:
-    'Indian-fusion caf\u00e9 and bar in Fitzroy, Melbourne. Turmeric lattes, masala eggs, weekend biryani.',
-  url: 'https://saffronand.co',
-  telephone: '0401 234 567',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '87 Brunswick Street',
-    addressLocality: 'Fitzroy',
-    addressRegion: 'VIC',
-    postalCode: '3065',
-    addressCountry: 'AU',
-  },
-  servesCuisine: ['Indian', 'Fusion', 'Australian'],
-  priceRange: '$$',
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Tuesday', 'Wednesday', 'Thursday'],
-      opens: '07:30',
-      closes: '16:00',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Friday', 'Saturday'],
-      opens: '07:30',
-      closes: '22:00',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: 'Sunday',
-      opens: '08:00',
-      closes: '16:00',
-    },
-  ],
-}
+/*
+ * There is deliberately no Restaurant / LocalBusiness JSON-LD here.
+ *
+ * Saffron & Co does not exist. Publishing opening hours, a telephone number
+ * and a postal address as structured data would invite search engines to list
+ * a fictional café as a real place someone could turn up to. The page is still
+ * indexable — it just does not claim to be a business.
+ */
 
 export default function RootLayout({
   children,
@@ -80,12 +51,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-AU">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
       <body
         className={`${playfair.variable} ${dmSans.variable} ${spaceMono.variable} ${oiFont.variable} bg-bg-deep text-text-cream font-dm-sans antialiased overflow-x-hidden`}
       >

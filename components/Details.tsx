@@ -7,58 +7,92 @@ import { hours, contactDetails } from '@/lib/constants'
 
 const iconMap = { mail: Mail, instagram: Instagram, phone: Phone }
 
+/**
+ * Both forms are deliberately inert.
+ *
+ * This is a spec build for a business that does not exist, so there is nothing
+ * behind a submit button and no third-party endpoint collecting addresses.
+ * They demonstrate the interaction and then say plainly that nothing was sent.
+ */
 export function Details() {
   const [subscribed, setSubscribed] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    const form = e.currentTarget
-    const formData = new FormData(form)
-
-    const apiKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY
-    if (apiKey) {
-      formData.append('access_key', apiKey)
-      try {
-        await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData })
-      } catch {}
-    }
-    setSubmitted(true)
-  }
-
   return (
-    <section id="details" aria-label="Find Us" className="bg-bg-deep pt-[120px] pb-20 px-6">
+    <section
+      id="details"
+      aria-labelledby="details-heading"
+      className="bg-bg-deep py-24 px-6"
+    >
       <div className="max-w-6xl mx-auto">
-        <span className="font-space-mono text-accent-turmeric text-xs tracking-[0.3em] uppercase">FIND US</span>
-        <h2 className="font-playfair text-[2rem] text-text-cream mt-4 mb-12">No bookings. Just rock up.</h2>
+        <span className="font-space-mono text-accent-turmeric text-xs tracking-[0.3em] uppercase">
+          Find Us
+        </span>
+        <h2
+          id="details-heading"
+          className="font-playfair text-[2rem] text-text-cream mt-4 mb-12"
+        >
+          No bookings. Just rock up.
+        </h2>
 
-        {/* Three columns */}
         <div className="grid lg:grid-cols-3 gap-12">
-
-          {/* Column 1 — Location */}
+          {/* Location */}
           <Reveal>
             <div>
-              <p className="font-dm-sans font-medium text-text-cream">87 Brunswick Street</p>
+              <p className="font-dm-sans font-medium text-text-cream">
+                Brunswick Street
+              </p>
               <p className="font-dm-sans text-text-spice">Fitzroy VIC 3065</p>
               <p className="font-dm-sans text-text-spice">Melbourne, Australia</p>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.123!2d144.977!3d-37.7965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ3JzQ3LjQiUyAxNDTCsDU4JzM3LjIiRQ!5e0!3m2!1sen!2sau!4v1234567890"
-                className="w-full h-[200px] rounded-lg border border-border mt-4"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Saffron & Co location"
-                style={{ filter: 'invert(90%) hue-rotate(180deg) saturate(0.3) brightness(0.8)' }}
-              />
+
+              {/* A real map embed would point strangers at a real street number
+                  and cost a few hundred ms of third-party JavaScript. Neither
+                  is worth it for a business that does not exist. */}
+              <div
+                className="relative w-full h-[200px] rounded-lg border border-border mt-4 overflow-hidden bg-bg-rich"
+                role="img"
+                aria-label="Illustrative map. This café is a demo build and has no real location."
+              >
+                <div
+                  className="absolute inset-0 opacity-40"
+                  style={{
+                    backgroundImage:
+                      'linear-gradient(var(--color-border) 1px, transparent 1px), linear-gradient(90deg, var(--color-border) 1px, transparent 1px)',
+                    backgroundSize: '28px 28px',
+                  }}
+                  aria-hidden="true"
+                />
+                <div
+                  className="absolute inset-y-0 left-1/3 w-8 -rotate-12 bg-bg-warm"
+                  aria-hidden="true"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="font-space-mono text-[11px] uppercase tracking-[0.2em] text-text-muted text-center px-6 leading-relaxed">
+                    Illustrative only
+                    <br />
+                    no real address
+                  </span>
+                </div>
+              </div>
             </div>
           </Reveal>
 
-          {/* Column 2 — Hours */}
+          {/* Hours */}
           <Reveal delay={0.1}>
             <div>
               {hours.map((entry) => (
-                <div key={entry.days + entry.hours} className="flex justify-between py-2 border-b border-border/50 last:border-0">
-                  <span className="font-dm-sans font-medium text-text-cream">{entry.days}</span>
-                  <span className={`font-dm-sans ${entry.highlight ? 'text-accent-turmeric' : 'text-text-spice'}`}>
+                <div
+                  key={entry.days + entry.hours}
+                  className="flex justify-between gap-4 py-2 border-b border-border/50 last:border-0"
+                >
+                  <span className="font-dm-sans font-medium text-text-cream">
+                    {entry.days}
+                  </span>
+                  <span
+                    className={`font-dm-sans text-right ${
+                      entry.highlight ? 'text-accent-turmeric' : 'text-text-spice'
+                    }`}
+                  >
                     {entry.hours}
                   </span>
                 </div>
@@ -66,7 +100,7 @@ export function Details() {
             </div>
           </Reveal>
 
-          {/* Column 3 — Say Hello */}
+          {/* Say hello */}
           <Reveal delay={0.2}>
             <div>
               {contactDetails.map((detail) => {
@@ -75,26 +109,28 @@ export function Details() {
                   <a
                     key={detail.label}
                     href={detail.href}
-                    className="flex items-center gap-3 py-2 text-text-cream hover:underline transition-colors cursor-pointer"
-                    target={detail.icon === 'instagram' ? '_blank' : undefined}
-                    rel={detail.icon === 'instagram' ? 'noopener noreferrer' : undefined}
+                    className="flex items-center gap-3 py-2 text-text-cream hover:text-accent-turmeric transition-colors"
                   >
                     <Icon size={18} className="text-text-muted" />
                     <span>{detail.label}</span>
                   </a>
                 )
               })}
+              <p className="font-dm-sans text-xs text-text-muted mt-4 leading-relaxed">
+                Contact details are placeholders. Nothing here reaches a real
+                inbox or phone.
+              </p>
             </div>
           </Reveal>
         </div>
 
-        {/* Newsletter + Contact form */}
+        {/* Forms */}
         <div className="grid lg:grid-cols-2 gap-12 mt-16 pt-16 border-t border-border">
-
-          {/* Left — Newsletter */}
           <Reveal>
             <div>
-              <p className="font-dm-sans text-text-spice mb-4">Get the Saturday biryani alert.</p>
+              <p className="font-dm-sans text-text-spice mb-4">
+                Get the Saturday biryani alert.
+              </p>
               <form
                 className="flex gap-2"
                 onSubmit={(e) => {
@@ -106,28 +142,39 @@ export function Details() {
                   type="email"
                   placeholder="Your email"
                   required
-                  className="flex-1 bg-bg-rich border border-border text-text-cream rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent-turmeric placeholder:text-text-muted"
+                  className="flex-1 min-w-0 bg-bg-rich border border-border text-text-cream rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent-turmeric placeholder:text-text-muted"
                   aria-label="Email for newsletter"
                 />
                 <button
                   type="submit"
-                  className="w-10 h-10 rounded-full bg-accent-turmeric flex items-center justify-center hover:brightness-110 transition cursor-pointer"
+                  className="w-10 h-10 shrink-0 rounded-full bg-accent-turmeric flex items-center justify-center hover:brightness-110 transition"
                   aria-label="Subscribe"
                 >
                   <ArrowRight size={18} className="text-bg-deep" />
                 </button>
               </form>
-              {subscribed && (
-                <p className="text-accent-sage text-sm mt-2">You're in. See you Saturday.</p>
-              )}
+              <p className="text-sm mt-2 min-h-5" aria-live="polite" role="status">
+                {subscribed ? (
+                  <span className="text-accent-sage">
+                    That is the interaction. Being a demo, nothing was sent or
+                    stored.
+                  </span>
+                ) : null}
+              </p>
             </div>
           </Reveal>
 
-          {/* Right — Contact form */}
           <Reveal delay={0.1}>
             <div>
-              <p className="font-dm-sans text-text-spice mb-4">For catering, events, or just to say g'day.</p>
-              <form onSubmit={handleSubmit}>
+              <p className="font-dm-sans text-text-spice mb-4">
+                For catering, events, or just to say g&apos;day.
+              </p>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault()
+                  setSubmitted(true)
+                }}
+              >
                 <input
                   type="text"
                   name="name"
@@ -154,14 +201,19 @@ export function Details() {
                 />
                 <button
                   type="submit"
-                  className="w-full bg-accent-turmeric text-bg-deep font-medium rounded-lg py-3 mt-4 hover:brightness-110 transition cursor-pointer"
+                  className="w-full bg-accent-turmeric text-bg-deep font-medium rounded-lg py-3 mt-4 hover:brightness-110 transition"
                 >
                   Send it.
                 </button>
               </form>
-              {submitted && (
-                <p className="text-accent-sage text-sm mt-2">Got it. We'll be in touch.</p>
-              )}
+              <p className="text-sm mt-2 min-h-5" aria-live="polite" role="status">
+                {submitted ? (
+                  <span className="text-accent-sage">
+                    Got it — or we would have, if this were a real café. Nothing
+                    was sent.
+                  </span>
+                ) : null}
+              </p>
             </div>
           </Reveal>
         </div>

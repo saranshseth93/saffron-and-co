@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 import { FloatingWord } from '@/components/ui/FloatingWord'
+import { Photo } from '@/components/ui/Photo'
 import { floatingWords } from '@/lib/constants'
 
 const wordPositions: React.CSSProperties[] = [
@@ -31,7 +32,8 @@ export function Hero() {
 
   // GSAP parallax on headline
   useEffect(() => {
-    let ctx: any
+    // Structural type: gsap is dynamically imported, so its types are not in scope here.
+    let ctx: { revert: () => void } | undefined
     async function initParallax() {
       try {
         const { gsap } = await import('gsap')
@@ -85,6 +87,20 @@ export function Hero() {
       ref={sectionRef}
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-bg-deep px-6"
     >
+      {/* Room photograph. Decorative — the headline carries the meaning — but
+          it is the LCP element, so it loads eagerly at high priority. */}
+      <div className="absolute inset-0" aria-hidden="true">
+        <Photo
+          slot="hero"
+          alt=""
+          sizes="100vw"
+          priority
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-bg-deep/[0.72]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-bg-deep/80 via-transparent to-bg-deep" />
+      </div>
+
       {/* Floating spice words */}
       {visibleWords.map((word, i) => (
         <FloatingWord key={word} word={word} style={wordPositions[i]} />

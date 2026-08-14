@@ -1,0 +1,319 @@
+{
+  "version": 1,
+  "provider": null,
+  "resolvedAt": null,
+  "slots": {
+    "hero": {
+      "provider": "placeholder",
+      "id": "hero",
+      "creator": "Generated placeholder",
+      "creatorUrl": "",
+      "licence": "n/a",
+      "licenceUrl": "",
+      "sourcePage": "",
+      "downloadUrl": "",
+      "placeholder": true,
+      "aspect": 1.6,
+      "derivatives": [
+        {
+          "width": 768,
+          "height": 480
+        },
+        {
+          "width": 1280,
+          "height": 800
+        },
+        {
+          "width": 1920,
+          "height": 1200
+        },
+        {
+          "width": 2560,
+          "height": 1600
+        }
+      ],
+      "lqip": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADwAgCdASoUAA0APt1apky3JSOiMAgC4BuJZQCsADDWAAD+719mXhUl0glnHyodtYqAAA=="
+    },
+    "dish-dosa": {
+      "provider": "placeholder",
+      "id": "dish-dosa",
+      "creator": "Generated placeholder",
+      "creatorUrl": "",
+      "licence": "n/a",
+      "licenceUrl": "",
+      "sourcePage": "",
+      "downloadUrl": "",
+      "placeholder": true,
+      "aspect": 1.25,
+      "derivatives": [
+        {
+          "width": 420,
+          "height": 336
+        },
+        {
+          "width": 720,
+          "height": 576
+        },
+        {
+          "width": 1040,
+          "height": 832
+        }
+      ],
+      "lqip": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAABQAwCdASoUABAAPt1cpky/pSOiMAgD8BuJYwCw7DKK3me6/AD+5Ged6ZPqE1orBShW+MkaMunJ9nK+eAAAAA=="
+    },
+    "dish-biryani": {
+      "provider": "placeholder",
+      "id": "dish-biryani",
+      "creator": "Generated placeholder",
+      "creatorUrl": "",
+      "licence": "n/a",
+      "licenceUrl": "",
+      "sourcePage": "",
+      "downloadUrl": "",
+      "placeholder": true,
+      "aspect": 1.25,
+      "derivatives": [
+        {
+          "width": 420,
+          "height": 336
+        },
+        {
+          "width": 720,
+          "height": 576
+        },
+        {
+          "width": 1040,
+          "height": 832
+        }
+      ],
+      "lqip": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoUABAAPt1cp0y/pSOiMAgD8BuJZACdMoAEYqD1QAD+tPzJzr/37Pq//rVgK6kvrVaR+ubCC9dweSqEkL320i2u04AAAA=="
+    },
+    "dish-eggs": {
+      "provider": "placeholder",
+      "id": "dish-eggs",
+      "creator": "Generated placeholder",
+      "creatorUrl": "",
+      "licence": "n/a",
+      "licenceUrl": "",
+      "sourcePage": "",
+      "downloadUrl": "",
+      "placeholder": true,
+      "aspect": 1.25,
+      "derivatives": [
+        {
+          "width": 420,
+          "height": 336
+        },
+        {
+          "width": 720,
+          "height": 576
+        },
+        {
+          "width": 1040,
+          "height": 832
+        }
+      ],
+      "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQAwCdASoUABAAPt1cpky9JSOiMAgDoBuJZACxGwACfjAA/uute2v2AkH1Q861/o+bG894IR2Klwc+LxbFl2eGAAAAAA=="
+    },
+    "chai": {
+      "provider": "placeholder",
+      "id": "chai",
+      "creator": "Generated placeholder",
+      "creatorUrl": "",
+      "licence": "n/a",
+      "licenceUrl": "",
+      "sourcePage": "",
+      "downloadUrl": "",
+      "placeholder": true,
+      "aspect": 0.8,
+      "derivatives": [
+        {
+          "width": 420,
+          "height": 525
+        },
+        {
+          "width": 720,
+          "height": 900
+        },
+        {
+          "width": 1040,
+          "height": 1300
+        }
+      ],
+      "lqip": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQBACdASoUABkAPt1ao02/pSMpMBgMA/AbiWUAwoAWbeYRQH/KSqiJgAD+S+0p9337NxLYKULATdWnpQuiUY5iXZS5SEQlB7JMD5KT+gAAAA=="
+    },
+    "bar": {
+      "provider": "placeholder",
+      "id": "bar",
+      "creator": "Generated placeholder",
+      "creatorUrl": "",
+      "licence": "n/a",
+      "licenceUrl": "",
+      "sourcePage": "",
+      "downloadUrl": "",
+      "placeholder": true,
+      "aspect": 1.5,
+      "derivatives": [
+        {
+          "width": 768,
+          "height": 512
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ],
+      "lqip": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAgCdASoUAA0APt1apky9JSOiMAgDoBuJZQCdAC5JAAD+7re3NuL1l1A7v5A99NIJcHfsARUo6wAA"
+    },
+    "story": {
+      "provider": "placeholder",
+      "id": "story",
+      "creator": "Generated placeholder",
+      "creatorUrl": "",
+      "licence": "n/a",
+      "licenceUrl": "",
+      "sourcePage": "",
+      "downloadUrl": "",
+      "placeholder": true,
+      "aspect": 0.78,
+      "derivatives": [
+        {
+          "width": 420,
+          "height": 538
+        },
+        {
+          "width": 720,
+          "height": 923
+        },
+        {
+          "width": 1040,
+          "height": 1333
+        }
+      ],
+      "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAABQBACdASoUABoAPt1gp04/ryOjMBgIA/AbiWcAvdAWiU5YTFLZl+5F3iGAAP7iH6onP2xLrrHnHHJkwDWNMXiOa22xYAAA"
+    },
+    "spices": {
+      "provider": "placeholder",
+      "id": "spices",
+      "creator": "Generated placeholder",
+      "creatorUrl": "",
+      "licence": "n/a",
+      "licenceUrl": "",
+      "sourcePage": "",
+      "downloadUrl": "",
+      "placeholder": true,
+      "aspect": 2.4,
+      "derivatives": [
+        {
+          "width": 768,
+          "height": 320
+        },
+        {
+          "width": 1280,
+          "height": 533
+        },
+        {
+          "width": 1920,
+          "height": 800
+        }
+      ],
+      "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABwAwCdASoUAAgAPt1apky3JSOiMAgC4BuJYgCdMoAGh1ugq+gA/Hg3vHYCQf61bLdAxT+23d/wSVOyyzsBx2vFl+1QAA=="
+    },
+    "gallery-1": {
+      "provider": "placeholder",
+      "id": "gallery-1",
+      "creator": "Generated placeholder",
+      "creatorUrl": "",
+      "licence": "n/a",
+      "licenceUrl": "",
+      "sourcePage": "",
+      "downloadUrl": "",
+      "placeholder": true,
+      "aspect": 1,
+      "derivatives": [
+        {
+          "width": 320,
+          "height": 320
+        },
+        {
+          "width": 640,
+          "height": 640
+        }
+      ],
+      "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwBACdASoUABQAPt1cqUy/pSQiKA1T8BuJQBA9qLDvsEA/3YYhr+XDp6AA/rT92c1j9+z6v//7evrwd/2cpGNIKA0uDv+p6D6fPaqYPsILn0FjtwjXVpQAAAA="
+    },
+    "gallery-2": {
+      "provider": "placeholder",
+      "id": "gallery-2",
+      "creator": "Generated placeholder",
+      "creatorUrl": "",
+      "licence": "n/a",
+      "licenceUrl": "",
+      "sourcePage": "",
+      "downloadUrl": "",
+      "placeholder": true,
+      "aspect": 1,
+      "derivatives": [
+        {
+          "width": 320,
+          "height": 320
+        },
+        {
+          "width": 640,
+          "height": 640
+        }
+      ],
+      "lqip": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAwCdASoUABQAPt1ipk63JaMiKA1S4BuJQBdmZfhGf6cAAP7qkU4DWAkH8OLGQ3+1OM8X9/r2n2mrAlP8lGl/T7chSN6o3gAAAA=="
+    },
+    "gallery-3": {
+      "provider": "placeholder",
+      "id": "gallery-3",
+      "creator": "Generated placeholder",
+      "creatorUrl": "",
+      "licence": "n/a",
+      "licenceUrl": "",
+      "sourcePage": "",
+      "downloadUrl": "",
+      "placeholder": true,
+      "aspect": 1,
+      "derivatives": [
+        {
+          "width": 320,
+          "height": 320
+        },
+        {
+          "width": 640,
+          "height": 640
+        }
+      ],
+      "lqip": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACwAwCdASoUABQAPt1cqU0/pSQiKA1T8BuJZwAAKdsUzBe4Bv5dAADuhtiGb7dpOPvolbTjArizfdpPMKxMPIAA"
+    },
+    "gallery-4": {
+      "provider": "placeholder",
+      "id": "gallery-4",
+      "creator": "Generated placeholder",
+      "creatorUrl": "",
+      "licence": "n/a",
+      "licenceUrl": "",
+      "sourcePage": "",
+      "downloadUrl": "",
+      "placeholder": true,
+      "aspect": 1,
+      "derivatives": [
+        {
+          "width": 320,
+          "height": 320
+        },
+        {
+          "width": 640,
+          "height": 640
+        }
+      ],
+      "lqip": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAwCdASoUABQAPt1eqE2/pSQiKA1T8BuJZQC7ABmG2Evotqv+AAD+4h+qU1+oTWixcJqj8ZVi+eZQtIhJSeyQYAA="
+    }
+  }
+}

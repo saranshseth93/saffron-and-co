@@ -40,3 +40,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated image derivatives (rebuilt by scripts/images-build.mjs)
+/public/images/

@@ -11,7 +11,8 @@ export function FloatingWord({ word, style }: FloatingWordProps) {
   const ref = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
-    let ctx: any
+    // Structural type: gsap is dynamically imported, so its types are not in scope here.
+    let ctx: { revert: () => void } | undefined
     async function initGSAP() {
       try {
         const { gsap } = await import('gsap')
@@ -30,8 +31,8 @@ export function FloatingWord({ word, style }: FloatingWordProps) {
             },
           })
         })
-      } catch (e) {
-        // GSAP failed to load — word stays static
+      } catch {
+        // GSAP failed to load — the word just stays static.
       }
     }
     initGSAP()

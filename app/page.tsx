@@ -1,28 +1,29 @@
 import { Navigation } from '@/components/Navigation'
+import { SpecNoticeBar, SpecNoticeFooter } from '@/components/SpecNotice'
 import { Hero } from '@/components/Hero'
 import { Introduction } from '@/components/Introduction'
-import { PressStrip } from '@/components/PressStrip'
-import { MenuHighlights } from '@/components/MenuHighlights'
+import { Menu } from '@/components/Menu'
 import { ParallaxQuote } from '@/components/ParallaxQuote'
 import { TheBar } from '@/components/TheBar'
 import { OurStory } from '@/components/OurStory'
-import { InstagramStrip } from '@/components/InstagramStrip'
+import { Gallery } from '@/components/Gallery'
 import { Details } from '@/components/Details'
 import { Footer } from '@/components/Footer'
 
 export default function Home() {
   return (
     <>
+      <SpecNoticeBar />
       <Navigation />
       <Hero />
       <Introduction />
-      <PressStrip />
-      <MenuHighlights />
+      <Menu />
       <ParallaxQuote />
       <TheBar />
       <OurStory />
-      <InstagramStrip />
+      <Gallery />
       <Details />
+      <SpecNoticeFooter />
       <Footer />
     </>
   )

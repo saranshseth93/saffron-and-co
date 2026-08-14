@@ -64,15 +64,13 @@ body::after {
   background-repeat: repeat;
 }
 
-/* Menu bento grid layout — responsive grid-template-areas (Tailwind can't do this) */
-@media (min-width: 1024px) {
-  .menu-bento {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-      "latte latte eggs"
-      "dosa bread toastie"
-      "biryani biryani biryani";
-  }
+/* Horizontal menu-section switcher: scrollable on small screens, no scrollbar */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }
 
 /* Reduced motion preferences */

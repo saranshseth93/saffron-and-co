@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Saffron & Co
 
-## Getting Started
+A **fictional** Indian-fusion café in Fitzroy, Melbourne, designed and built by
+[Pixel Pundit](https://pixelpundit.com.au) as a portfolio spec piece.
 
-First, run the development server:
+Saffron & Co is not a real business. The menu, prices, people, phone number and
+address are illustrative. There are no real reviews, awards, press mentions or
+customer numbers anywhere on the site, and the contact forms are inert — they
+demonstrate the interaction and then say so.
+
+**Live:** https://saranshseth93.github.io/saffron-and-co/
+
+## Stack
+
+Next.js 16 static export, Tailwind CSS 4, Framer Motion, GSAP ScrollTrigger,
+Lenis smooth scroll. Deployed to GitHub Pages by
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+
+## Photography
+
+Every photo is royalty-free and credited in [CREDITS.md](./CREDITS.md).
+
+Images are not committed. They are resolved from a provider API, pinned in
+`images.lock.json`, then downloaded and turned into responsive AVIF/WebP
+derivatives at build time.
+
+| Command | What it does |
+|---|---|
+| `pnpm images:resolve` | Pins a real photo to each slot in `images.config.mjs` and records its photographer, licence and source page. Only fills slots that are missing or whose query changed. |
+| `pnpm images:resolve --force` | Re-pins every slot. |
+| `pnpm images:build` | Downloads the pinned photos, generates the derivatives, writes `CREDITS.md`. |
+| `pnpm images:build --offline` | Generates procedural stand-ins instead, so the site builds with no network. |
+| `pnpm images:verify` | Deploy gate: fails if any slot is a stand-in, unbuilt or uncredited. |
+
+The resolver uses [Pexels](https://www.pexels.com/license/) when a
+`PEXELS_API_KEY` repository secret is set, and falls back to
+[Openverse](https://openverse.org) (CC0 and public-domain only, no key needed)
+when it is not.
+
+Because the credits are written from the API response rather than typed by
+hand, every attribution in `CREDITS.md` is traceable to the photo actually
+being served.
+
+### Adding or changing a photo
+
+Edit the slot in `images.config.mjs` and re-run the resolver. To pin a specific
+photo by hand, edit its entry in `images.lock.json` and add `"manual": true` —
+the resolver will then leave it alone.
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+pnpm images:build --offline   # or `pnpm images:build` with a network
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Command | |
+|---|---|
+| `pnpm dev` | Dev server |
+| `pnpm build` | Static export to `out/` |
+| `pnpm lint` | ESLint |
+| `pnpm typecheck` | `tsc --noEmit` |

@@ -7,7 +7,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "images:resolve": "node scripts/images-resolve.mjs",
+    "images:build": "node scripts/images-build.mjs",
+    "images:offline": "node scripts/images-build.mjs --offline",
+    "typecheck": "tsc --noEmit",
+    "images:verify": "node scripts/images-verify.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",
@@ -25,6 +30,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

@@ -10,7 +10,8 @@ export function ParallaxQuote() {
   const lineBottomRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    let ctx: any
+    // Structural type: gsap is dynamically imported, so its types are not in scope here.
+    let ctx: { revert: () => void } | undefined
     async function init() {
       try {
         const { gsap } = await import('gsap')
@@ -43,7 +44,7 @@ export function ParallaxQuote() {
         <Reveal>
           <div ref={lineTopRef} className="h-px w-32 bg-accent-turmeric mx-auto mb-12" />
           <blockquote ref={quoteRef} className="font-playfair italic text-[clamp(1.75rem,4vw,3.25rem)] text-text-cream leading-snug will-change-transform">
-            "We cook the way we grew up eating — a little bit of everything, all at once, and always with too much flavour."
+            “We cook the way we grew up eating, a little bit of everything, all at once, and always with too much flavour.”
           </blockquote>
           <div ref={lineBottomRef} className="h-px w-32 bg-accent-turmeric mx-auto mt-12" />
           <p className="font-space-mono text-text-muted text-[13px] mt-8">— Priya & Arjun, Founders</p>

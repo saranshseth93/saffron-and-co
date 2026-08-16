@@ -89,12 +89,16 @@ export function Hero() {
       className="relative min-h-screen flex flex-col items-center justify-center bg-bg-deep px-6"
     >
       {/* Room photograph. Decorative — the headline carries the meaning — but
-          it is the LCP element, so it loads eagerly at high priority. */}
+          it is the LCP element, so it loads eagerly at high priority.
+
+          sizes is 116vw rather than 100vw because the parallax scales this
+          image 1.16x: a source chosen for the unscaled box arrives ~15%
+          upscaled and soft. */}
       <div className="parallax absolute inset-0" aria-hidden="true">
         <Photo
           slot="hero"
           alt=""
-          sizes="100vw"
+          sizes="116vw"
           priority
           className="parallax-img w-full h-full object-cover"
         />

@@ -1,19 +1,22 @@
 {
   "version": 1,
-  "provider": null,
-  "resolvedAt": null,
+  "provider": "openverse",
+  "resolvedAt": "2026-08-16T02:57:54.165Z",
   "slots": {
     "hero": {
-      "provider": "placeholder",
-      "id": "hero",
-      "creator": "Generated placeholder",
-      "creatorUrl": "",
-      "licence": "n/a",
-      "licenceUrl": "",
-      "sourcePage": "",
-      "downloadUrl": "",
-      "placeholder": true,
-      "aspect": 1.6,
+      "provider": "pexels",
+      "id": "12181619",
+      "downloadUrl": "https://images.pexels.com/photos/12181619/pexels-photo-12181619.jpeg",
+      "sourcePage": "https://www.pexels.com/photo/people-at-restaurant-12181619/",
+      "creator": "Cihan Yüce",
+      "creatorUrl": "https://www.pexels.com/@cihanyuce",
+      "licence": "Pexels License",
+      "licenceUrl": "https://www.pexels.com/license/",
+      "alt": "A bustling restaurant interior showcasing diners enjoying their meals in a cozy atmosphere.",
+      "width": 6016,
+      "height": 4016,
+      "fingerprint": "6537c28870fb17de",
+      "query": "restaurant interior warm",
       "derivatives": [
         {
           "width": 768,
@@ -32,19 +35,23 @@
           "height": 1600
         }
       ],
-      "lqip": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADwAgCdASoUAA0APt1apky3JSOiMAgC4BuJZQCsADDWAAD+719mXhUl0glnHyodtYqAAA=="
+      "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAwCdASoUAA0APt1cpkyopSOiMAgBEBuJYwCdACHXFe5YEyyh16AA/r5yRzACmbS4vU4uYXRPKmWqE/5ILrEZmxPyvFRgsVlrWLe4AAA=",
+      "aspect": 1.6
     },
     "dish-dosa": {
-      "provider": "placeholder",
-      "id": "dish-dosa",
-      "creator": "Generated placeholder",
-      "creatorUrl": "",
-      "licence": "n/a",
-      "licenceUrl": "",
-      "sourcePage": "",
-      "downloadUrl": "",
-      "placeholder": true,
-      "aspect": 1.25,
+      "provider": "pexels",
+      "id": "20422121",
+      "downloadUrl": "https://images.pexels.com/photos/20422121/pexels-photo-20422121.jpeg",
+      "sourcePage": "https://www.pexels.com/photo/cone-bread-on-plate-20422121/",
+      "creator": "Jack Baghel",
+      "creatorUrl": "https://www.pexels.com/@jack-baghel-2199968",
+      "licence": "Pexels License",
+      "licenceUrl": "https://www.pexels.com/license/",
+      "alt": "Crispy cone dosa served with authentic Indian chutneys and sambar on a dark backdrop.",
+      "width": 9504,
+      "height": 6336,
+      "fingerprint": "ac160735b50cc685",
+      "query": "dosa south indian crepe chutney",
       "derivatives": [
         {
           "width": 420,
@@ -59,19 +66,23 @@
           "height": 832
         }
       ],
-      "lqip": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAABQAwCdASoUABAAPt1cpky/pSOiMAgD8BuJYwCw7DKK3me6/AD+5Ged6ZPqE1orBShW+MkaMunJ9nK+eAAAAA=="
+      "lqip": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAwCdASoUAA0APt1apkyopSOiMAgBEBuJQBdgA9IM7Y+ZRSu7CuoAAP7ytIyKjST3WTxh6rLuZmrGcBrgNb606bTiqgXgRPJAgAAA",
+      "aspect": 1.25
     },
     "dish-biryani": {
-      "provider": "placeholder",
-      "id": "dish-biryani",
-      "creator": "Generated placeholder",
-      "creatorUrl": "",
-      "licence": "n/a",
-      "licenceUrl": "",
-      "sourcePage": "",
-      "downloadUrl": "",
-      "placeholder": true,
-      "aspect": 1.25,
+      "provider": "pexels",
+      "id": "9609853",
+      "downloadUrl": "https://images.pexels.com/photos/9609853/pexels-photo-9609853.jpeg",
+      "sourcePage": "https://www.pexels.com/photo/egg-slices-on-biryani-9609853/",
+      "creator": "Prabal Pratap Singh",
+      "creatorUrl": "https://www.pexels.com/@prabal",
+      "licence": "Pexels License",
+      "licenceUrl": "https://www.pexels.com/license/",
+      "alt": "Close-up of flavorful Indian biryani with boiled eggs, curry, and yogurt side dish.",
+      "width": 4457,
+      "height": 3343,
+      "fingerprint": "ca02d3d6d97fd530",
+      "query": "lamb biryani rice saffron bowl",
       "derivatives": [
         {
           "width": 420,
@@ -86,19 +97,23 @@
           "height": 832
         }
       ],
-      "lqip": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoUABAAPt1cp0y/pSOiMAgD8BuJZACdMoAEYqD1QAD+tPzJzr/37Pq//rVgK6kvrVaR+ubCC9dweSqEkL320i2u04AAAA=="
+      "lqip": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQBACdASoUAA8APt1cp0yopSOiMAgBEBuJYgCdMoMYADwIMVjLdZkhAAD+0N1Wyk3UpnsVl5SzGuQDMary0N+g/ZbFPmuhJtOrk9q4Qq7lrezUw4EB89cxhY+LRDgRszMhcIAA",
+      "aspect": 1.25
     },
     "dish-eggs": {
-      "provider": "placeholder",
-      "id": "dish-eggs",
-      "creator": "Generated placeholder",
-      "creatorUrl": "",
-      "licence": "n/a",
-      "licenceUrl": "",
-      "sourcePage": "",
-      "downloadUrl": "",
-      "placeholder": true,
-      "aspect": 1.25,
+      "provider": "pexels",
+      "id": "13020203",
+      "downloadUrl": "https://images.pexels.com/photos/13020203/pexels-photo-13020203.jpeg",
+      "sourcePage": "https://www.pexels.com/photo/toasts-and-scrambled-eggs-on-a-plate-13020203/",
+      "creator": "Iva Tomic",
+      "creatorUrl": "https://www.pexels.com/@iva-tomic-966048",
+      "licence": "Pexels License",
+      "licenceUrl": "https://www.pexels.com/license/",
+      "alt": "A breakfast plate with scrambled eggs, toast, salad, and coffee on a marble surface.",
+      "width": 4000,
+      "height": 3000,
+      "fingerprint": "e105924653a3c990",
+      "query": "scrambled eggs sourdough toast breakfast",
       "derivatives": [
         {
           "width": 420,
@@ -113,19 +128,23 @@
           "height": 832
         }
       ],
-      "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQAwCdASoUABAAPt1cpky9JSOiMAgDoBuJZACxGwACfjAA/uute2v2AkH1Q861/o+bG894IR2Klwc+LxbFl2eGAAAAAA=="
+      "lqip": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABQBACdASoUAA8APt1apkyopSOiMAgBEBuJagCsMoAC2/qjpLqRWMQ1B4YAAP1uZeXui7cKKdWpgUWOeWR3QTXic4D7c4IOuaeyCPBJUzW2fnJX3r58yOJlg/f7Ff/3Nwrb6zKK6GZgQ+S/NUAAAA==",
+      "aspect": 1.25
     },
     "chai": {
-      "provider": "placeholder",
-      "id": "chai",
-      "creator": "Generated placeholder",
-      "creatorUrl": "",
-      "licence": "n/a",
-      "licenceUrl": "",
-      "sourcePage": "",
-      "downloadUrl": "",
-      "placeholder": true,
-      "aspect": 0.8,
+      "provider": "pexels",
+      "id": "37186989",
+      "downloadUrl": "https://images.pexels.com/photos/37186989/pexels-photo-37186989.jpeg",
+      "sourcePage": "https://www.pexels.com/photo/authentic-indian-masala-chai-glass-close-up-37186989/",
+      "creator": "vishranthanadka7",
+      "creatorUrl": "https://www.pexels.com/@vishranthanadka7-2159659255",
+      "licence": "Pexels License",
+      "licenceUrl": "https://www.pexels.com/license/",
+      "alt": "Close-up of a glass filled with creamy Indian masala chai on a wooden table.",
+      "width": 1848,
+      "height": 2707,
+      "fingerprint": "19b2ce2a192ac2da",
+      "query": "masala chai tea pouring glass spices",
       "derivatives": [
         {
           "width": 420,
@@ -140,19 +159,23 @@
           "height": 1300
         }
       ],
-      "lqip": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQBACdASoUABkAPt1ao02/pSMpMBgMA/AbiWUAwoAWbeYRQH/KSqiJgAD+S+0p9337NxLYKULATdWnpQuiUY5iXZS5SEQlB7JMD5KT+gAAAA=="
+      "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAwBQCdASoUAB0APt1gp04opaOiMBgIARAbiWIArDM0PgAVHmj1T3mXUQBxUhhzT7bzgAD+6+EbITSjLLbazwjATvyE3SGO3LheFJ5xLARxrfyH50kGhrbQjY5WPiyzXOxqfv4As+CeCC2HFR2Hxrq5dQnUIrwJoDAL8AAA",
+      "aspect": 0.8
     },
     "bar": {
-      "provider": "placeholder",
-      "id": "bar",
-      "creator": "Generated placeholder",
-      "creatorUrl": "",
-      "licence": "n/a",
-      "licenceUrl": "",
-      "sourcePage": "",
-      "downloadUrl": "",
-      "placeholder": true,
-      "aspect": 1.5,
+      "provider": "pexels",
+      "id": "36107885",
+      "downloadUrl": "https://images.pexels.com/photos/36107885/pexels-photo-36107885.jpeg",
+      "sourcePage": "https://www.pexels.com/photo/moody-bar-scene-at-night-with-drink-36107885/",
+      "creator": "Jesse Hauck",
+      "creatorUrl": "https://www.pexels.com/@jesse-hauck-2156447237",
+      "licence": "Pexels License",
+      "licenceUrl": "https://www.pexels.com/license/",
+      "alt": "A dimly lit bar with a drink and bar tools creating a moody atmosphere.",
+      "width": 5840,
+      "height": 4672,
+      "fingerprint": "8591a80ec918ec51",
+      "query": "cocktail bar dark moody drinks",
       "derivatives": [
         {
           "width": 768,
@@ -167,19 +190,23 @@
           "height": 1280
         }
       ],
-      "lqip": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAgCdASoUAA0APt1apky9JSOiMAgDoBuJZQCdAC5JAAD+7re3NuL1l1A7v5A99NIJcHfsARUo6wAA"
+      "lqip": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAABwAwCdASoUABAAPt1apkyopSOiMAgBEBuJQBOmUACM4jMNOUAA/u/FQfzPrZoRxukNPsDpMifvHssquJWYIMakAAA=",
+      "aspect": 1.5
     },
     "story": {
-      "provider": "placeholder",
-      "id": "story",
-      "creator": "Generated placeholder",
-      "creatorUrl": "",
-      "licence": "n/a",
-      "licenceUrl": "",
-      "sourcePage": "",
-      "downloadUrl": "",
-      "placeholder": true,
-      "aspect": 0.78,
+      "provider": "pexels",
+      "id": "4253292",
+      "downloadUrl": "https://images.pexels.com/photos/4253292/pexels-photo-4253292.jpeg",
+      "sourcePage": "https://www.pexels.com/photo/person-in-white-apron-holding-white-ceramic-plate-4253292/",
+      "creator": "cottonbro studio",
+      "creatorUrl": "https://www.pexels.com/@cottonbro",
+      "licence": "Pexels License",
+      "licenceUrl": "https://www.pexels.com/license/",
+      "alt": "Chef organizing ingredients at a restaurant kitchen counter, ready for cooking.",
+      "width": 4000,
+      "height": 6000,
+      "fingerprint": "deb5366687dd49a6",
+      "query": "chef cooking kitchen restaurant hands",
       "derivatives": [
         {
           "width": 420,
@@ -194,46 +221,54 @@
           "height": 1333
         }
       ],
-      "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAABQBACdASoUABoAPt1gp04/ryOjMBgIA/AbiWcAvdAWiU5YTFLZl+5F3iGAAP7iH6onP2xLrrHnHHJkwDWNMXiOa22xYAAA"
+      "lqip": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABwBQCdASoUAB4APt1YpU2opKMiMBgMARAbiWUAwrMvwM3L2EpchpQvB4lOK1GTqRWj6cKQAP7A7p9edJemyivRhSWdj3ivsqBankONg+7qL+LPbt7rDwzriaYdDwpqJho8GWAUxRlidTUo0b3+mFq5PFtxPTB4RulTLtxXLP2/5l87Hb1EAA==",
+      "aspect": 0.78
     },
     "spices": {
-      "provider": "placeholder",
-      "id": "spices",
-      "creator": "Generated placeholder",
-      "creatorUrl": "",
-      "licence": "n/a",
-      "licenceUrl": "",
-      "sourcePage": "",
-      "downloadUrl": "",
-      "placeholder": true,
-      "aspect": 2.4,
+      "provider": "pexels",
+      "id": "5056631",
+      "downloadUrl": "https://images.pexels.com/photos/5056631/pexels-photo-5056631.jpeg",
+      "sourcePage": "https://www.pexels.com/photo/close-up-of-a-mix-of-herbs-and-spices-5056631/",
+      "creator": "zachariah schrueder",
+      "creatorUrl": "https://www.pexels.com/@zachariah-schrueder-3379563",
+      "licence": "Pexels License",
+      "licenceUrl": "https://www.pexels.com/license/",
+      "alt": "Close-up of colorful Indian spices arranged on a wicker tray, showcasing diverse flavors.",
+      "width": 5616,
+      "height": 3744,
+      "fingerprint": "24a2318733414c64",
+      "query": "indian spices bowls turmeric cardamom",
       "derivatives": [
         {
           "width": 768,
-          "height": 320
+          "height": 427
         },
         {
           "width": 1280,
-          "height": 533
+          "height": 711
         },
         {
           "width": 1920,
-          "height": 800
+          "height": 1067
         }
       ],
-      "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABwAwCdASoUAAgAPt1apky3JSOiMAgC4BuJYgCdMoAGh1ugq+gA/Hg3vHYCQf61bLdAxT+23d/wSVOyyzsBx2vFl+1QAA=="
+      "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAwCdASoUAA0APt0+s1SooiWjmAEQG4lkALsAYhWkPS9NCGlwesAA/vM3sWTiR8xCo/6l3GozjH0yJvlglqeGuxVgEj/XWcKOWbcKkXM1czUmI+vX18QAAAA=",
+      "aspect": 1.8
     },
     "gallery-1": {
-      "provider": "placeholder",
-      "id": "gallery-1",
-      "creator": "Generated placeholder",
-      "creatorUrl": "",
-      "licence": "n/a",
-      "licenceUrl": "",
-      "sourcePage": "",
-      "downloadUrl": "",
-      "placeholder": true,
-      "aspect": 1,
+      "provider": "pexels",
+      "id": "6240913",
+      "downloadUrl": "https://images.pexels.com/photos/6240913/pexels-photo-6240913.jpeg",
+      "sourcePage": "https://www.pexels.com/photo/table-with-latte-cup-and-glass-of-water-in-cafeteria-6240913/",
+      "creator": "Maria  Bortolotto",
+      "creatorUrl": "https://www.pexels.com/@maria-bortolotto-10714080",
+      "licence": "Pexels License",
+      "licenceUrl": "https://www.pexels.com/license/",
+      "alt": "High angle of white round table with cup of latte on saucer with teaspoon near glass with water near white bowl with muesli in light cafeteria",
+      "width": 8000,
+      "height": 8000,
+      "fingerprint": "63ea68423b2144cc",
+      "query": "cafe latte coffee cup table",
       "derivatives": [
         {
           "width": 320,
@@ -244,19 +279,23 @@
           "height": 640
         }
       ],
-      "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwBACdASoUABQAPt1cqUy/pSQiKA1T8BuJQBA9qLDvsEA/3YYhr+XDp6AA/rT92c1j9+z6v//7evrwd/2cpGNIKA0uDv+p6D6fPaqYPsILn0FjtwjXVpQAAAA="
+      "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQBACdASoUABQAPt1YpU2opKMiMBgMARAbiWUAACrx2TsCh6kNrFX5ozOkitPFKAD+5TjbxFe/7yKe6ky+VA+4mp3eg3ggLtqPMRdquJ57XVpT9o25FTm5RCzB/N9I+HFgxEY4AAA=",
+      "aspect": 1
     },
     "gallery-2": {
-      "provider": "placeholder",
-      "id": "gallery-2",
-      "creator": "Generated placeholder",
-      "creatorUrl": "",
-      "licence": "n/a",
-      "licenceUrl": "",
-      "sourcePage": "",
-      "downloadUrl": "",
-      "placeholder": true,
-      "aspect": 1,
+      "provider": "pexels",
+      "id": "8992923",
+      "downloadUrl": "https://images.pexels.com/photos/8992923/pexels-photo-8992923.jpeg",
+      "sourcePage": "https://www.pexels.com/photo/samosa-dish-with-sauce-8992923/",
+      "creator": "I Own My Food Art",
+      "creatorUrl": "https://www.pexels.com/@i-own-my-food-art-76108785",
+      "licence": "Pexels License",
+      "licenceUrl": "https://www.pexels.com/license/",
+      "alt": "A delicious serving of Indian samosas with lime slices, spicy sauce, and green chilies.",
+      "width": 2934,
+      "height": 2934,
+      "fingerprint": "e5bc18ee0affa35b",
+      "query": "indian street food snacks plate",
       "derivatives": [
         {
           "width": 320,
@@ -267,19 +306,23 @@
           "height": 640
         }
       ],
-      "lqip": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAwCdASoUABQAPt1ipk63JaMiKA1S4BuJQBdmZfhGf6cAAP7qkU4DWAkH8OLGQ3+1OM8X9/r2n2mrAlP8lGl/T7chSN6o3gAAAA=="
+      "lqip": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBQCdASoUABQAPt1apU0opKMiMBgMARAbiUAWHYHpcRiZaI48jeMtBREmQJOWAGchgAD+7WEB2RWMQx4UTSBcXPBz0mJtPYev0njXMnoutzpVXh/UbHWknQ9OFXgHJUMHEvUMlqpzs1H9EIPyAAAA",
+      "aspect": 1
     },
     "gallery-3": {
-      "provider": "placeholder",
-      "id": "gallery-3",
-      "creator": "Generated placeholder",
-      "creatorUrl": "",
-      "licence": "n/a",
-      "licenceUrl": "",
-      "sourcePage": "",
-      "downloadUrl": "",
-      "placeholder": true,
-      "aspect": 1,
+      "provider": "pexels",
+      "id": "15928147",
+      "downloadUrl": "https://images.pexels.com/photos/15928147/pexels-photo-15928147.jpeg",
+      "sourcePage": "https://www.pexels.com/photo/bunches-of-water-celery-15928147/",
+      "creator": "Channabo Yos",
+      "creatorUrl": "https://www.pexels.com/@channabo-yos-274123950",
+      "licence": "Pexels License",
+      "licenceUrl": "https://www.pexels.com/license/",
+      "alt": "Bunches of fresh water celery displayed at a market stall in Cambodia. Perfect for culinary use.",
+      "width": 3024,
+      "height": 3024,
+      "fingerprint": "886bb20d527eeb3d",
+      "query": "fresh coriander herbs cooking ingredients",
       "derivatives": [
         {
           "width": 320,
@@ -290,19 +333,23 @@
           "height": 640
         }
       ],
-      "lqip": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACwAwCdASoUABQAPt1cqU0/pSQiKA1T8BuJZwAAKdsUzBe4Bv5dAADuhtiGb7dpOPvolbTjArizfdpPMKxMPIAA"
+      "lqip": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAQBQCdASoUABQAPt1ipk4opaMiKA1REBuJQBWGZDAwC0A+VhTqBVlnwnWlNKyH2f6AAP7cbW2HP0kTUp2jZovNQICsQm7nv6iwWXGLeEfopNfP2g/NhFr0Od0RLG4LwRL21tRQp4ibpVZoAAA=",
+      "aspect": 1
     },
     "gallery-4": {
-      "provider": "placeholder",
-      "id": "gallery-4",
-      "creator": "Generated placeholder",
-      "creatorUrl": "",
-      "licence": "n/a",
-      "licenceUrl": "",
-      "sourcePage": "",
-      "downloadUrl": "",
-      "placeholder": true,
-      "aspect": 1,
+      "provider": "pexels",
+      "id": "15823267",
+      "downloadUrl": "https://images.pexels.com/photos/15823267/pexels-photo-15823267.jpeg",
+      "sourcePage": "https://www.pexels.com/photo/piece-of-cake-on-a-plate-15823267/",
+      "creator": "Amirho3in tavkoli",
+      "creatorUrl": "https://www.pexels.com/@amirho3intavkooli",
+      "licence": "Pexels License",
+      "licenceUrl": "https://www.pexels.com/license/",
+      "alt": "A delicious slice of chocolate cake with strawberries on a black tray in Kerman, Iran.",
+      "width": 4000,
+      "height": 4000,
+      "fingerprint": "2967479a7f391356",
+      "query": "bakery pastry cake slice plate",
       "derivatives": [
         {
           "width": 320,
@@ -313,7 +360,8 @@
           "height": 640
         }
       ],
-      "lqip": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAwCdASoUABQAPt1eqE2/pSQiKA1T8BuJZQC7ABmG2Evotqv+AAD+4h+qU1+oTWixcJqj8ZVi+eZQtIhJSeyQYAA="
+      "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBQCdASoUABQAPt1ep02opSOiKA1REBuJZwDKABEzmWV8FkEzodxm1kVjEAZfgj6AAP7HfRYuHuSy56Utirjw1BhwzeAmWOEgSvDHR8mR0QeC4N2znQBlUGX89uov7b4bvDJikSyj8AAA",
+      "aspect": 1
     }
   }
 }

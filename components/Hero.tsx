@@ -85,17 +85,17 @@ export function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-bg-deep px-6"
+      className="relative min-h-screen flex flex-col items-center justify-center bg-bg-deep px-6"
     >
       {/* Room photograph. Decorative — the headline carries the meaning — but
           it is the LCP element, so it loads eagerly at high priority. */}
-      <div className="absolute inset-0" aria-hidden="true">
+      <div className="parallax absolute inset-0" aria-hidden="true">
         <Photo
           slot="hero"
           alt=""
           sizes="100vw"
           priority
-          className="w-full h-full object-cover"
+          className="parallax-img w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-bg-deep/[0.72]" />
         <div className="absolute inset-0 bg-gradient-to-b from-bg-deep/80 via-transparent to-bg-deep" />

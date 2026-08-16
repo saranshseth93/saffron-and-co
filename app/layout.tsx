@@ -50,9 +50,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en-AU">
+    // suppressHydrationWarning: the inline script below adds `js-reveal` to
+    // <html> before React hydrates, so the client element legitimately carries
+    // a class the server markup does not. Scoped to this element only.
+    <html lang="en-AU" suppressHydrationWarning>
       <body
-        className={`${playfair.variable} ${dmSans.variable} ${spaceMono.variable} ${oiFont.variable} bg-bg-deep text-text-cream font-dm-sans antialiased overflow-x-hidden`}
+        className={`${playfair.variable} ${dmSans.variable} ${spaceMono.variable} ${oiFont.variable} grain bg-bg-deep text-text-cream font-dm-sans antialiased overflow-x-hidden`}
       >
         <SmoothScroll />
         <a

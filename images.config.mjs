@@ -33,7 +33,9 @@ export const site = {
 export const slots = [
   {
     id: 'hero',
-    query: 'indian restaurant interior warm lighting',
+    // 'indian restaurant interior' pinned a red-lantern room that reads as a
+    // Chinese dining hall. Warm wood suits the spice palette far better.
+    query: 'restaurant interior warm',
     usage: 'Hero background',
     aspect: 1.6,
     widths: [768, 1280, 1920, 2560],
@@ -106,7 +108,11 @@ export const slots = [
     id: 'spices',
     query: 'indian spices bowls turmeric cardamom',
     usage: 'Menu section header texture',
-    aspect: 2.4,
+    // 1.8 rather than a panoramic 2.4. This is a cropped header texture, and
+    // 2.4 is rare enough in stock photography that no candidate ever matched —
+    // the slot silently fell back to a placeholder, which then failed the
+    // strict build for the whole site.
+    aspect: 1.8,
     widths: [768, 1280, 1920],
     orientation: 'landscape',
     focus: 'attention',

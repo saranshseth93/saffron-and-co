@@ -79,3 +79,101 @@ body::after {
     animation-name: none !important;
   }
 }
+
+/* ─────────────────────────────────────────────────────────────
+ * Motion and surface layer.
+ *
+ * Scroll motion is driven by CSS scroll-driven animations
+ * (`animation-timeline`), so there is no scroll listener, no rAF loop and no
+ * motion library — the compositor runs it off the main thread. Unsupported
+ * browsers get the static end state, which is why it all sits in @supports.
+ * Only transform and opacity animate; nothing here touches layout.
+ * ───────────────────────────────────────────────────────────── */
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Fixed, non-interactive noise so large flat fills do not read as sterile. */
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.26;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Structural: the frame clips its drifting child whether or not it moves. */
+.parallax {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    /*
+     * The frame publishes a named view timeline and the image consumes it.
+     * An anonymous view() on the image would resolve against its nearest
+     * scrollport — the clipping frame itself, which never scrolls — and would
+     * sit frozen at a fixed progress.
+     */
+    .parallax {
+      view-timeline-name: --sc-frame;
+    }
+
+    .parallax-img {
+      animation: sc-drift linear both;
+      animation-timeline: --sc-frame;
+      animation-range: cover 0% cover 100%;
+      will-change: transform;
+    }
+
+    @keyframes sc-drift {
+      from {
+        transform: translate3d(0, -7%, 0) scale(1.16);
+      }
+      to {
+        transform: translate3d(0, 7%, 0) scale(1.16);
+      }
+    }
+  }
+}
+
+/*
+ * Press feedback sits outside the reduced-motion guard: a press response is
+ * feedback, not decoration, and removing it makes the UI feel broken.
+ */
+.press {
+  transition:
+    transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.press:active {
+  transform: translateY(1px) scale(0.985);
+}
+
+/* Hover lift with a shadow tinted to the page, not generic black. */
+.lift {
+  transition:
+    transform 260ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 260ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 260ms ease;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px -18px rgb(12 10 8 / 0.9);
+  }
+}

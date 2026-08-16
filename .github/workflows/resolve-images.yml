@@ -14,12 +14,6 @@ on:
         description: 'Re-pin every slot, even ones already pinned'
         type: boolean
         default: false
-  push:
-    branches: ['claude/**']
-    paths:
-      - 'images.config.mjs'
-      - 'scripts/**'
-      - '.github/workflows/resolve-images.yml'
 
 permissions:
   contents: write

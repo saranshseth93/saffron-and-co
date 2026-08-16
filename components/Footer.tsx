@@ -46,10 +46,10 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="mt-6 space-y-2">
-          <p className="font-dm-sans text-[11px] text-text-muted/60 max-w-lg">
+          <p className="font-dm-sans text-[11px] text-text-muted max-w-lg">
             Saffron & Co acknowledges the Wurundjeri Woi Wurrung people of the Kulin Nation as the Traditional Owners of the land on which we gather.
           </p>
-          <p className="font-dm-sans text-[11px] text-text-muted/40">
+          <p className="font-dm-sans text-[11px] text-text-muted">
             A Pixel Pundit showcase. This is a fictional business.
           </p>
         </div>

@@ -27,20 +27,6 @@
   --animate-bounce-down: bounceDown 2s ease-in-out infinite;
 }
 
-/*
- * The decorative floating spice words are absolutely positioned and one of
- * them ("chai") pokes ~16px past the right edge on a 390px screen, which let
- * the whole page pan sideways.
- *
- * `clip` rather than `hidden`, and on <html> rather than <body>: overflow-x
- * on the body was not propagating to the viewport, and `hidden` would make
- * this element a scroll container, which kills the view timeline driving the
- * hero parallax. `clip` trims the overflow without creating a scrollport.
- */
-html {
-  overflow-x: clip;
-}
-
 @keyframes clipReveal {
   from {
     clip-path: inset(100% 0 0 0);

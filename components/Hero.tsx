@@ -102,10 +102,21 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-bg-deep/80 via-transparent to-bg-deep" />
       </div>
 
-      {/* Floating spice words */}
-      {visibleWords.map((word, i) => (
-        <FloatingWord key={word} word={word} style={wordPositions[i]} />
-      ))}
+      {/*
+        Floating spice words, inside their own clipping layer.
+
+        They are positioned by percentage and the right-hand ones spill past
+        the viewport edge on a narrow screen, which let the whole page pan
+        sideways. Clipping here rather than on <html> matters: this wrapper is
+        not an ancestor of the parallax frame, so trimming it costs nothing,
+        whereas an overflow on the root or the section makes that element a
+        scroll container and freezes the hero's view timeline.
+      */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        {visibleWords.map((word, i) => (
+          <FloatingWord key={word} word={word} style={wordPositions[i]} />
+        ))}
+      </div>
 
       {/* Headline container */}
       <div className="relative z-10 text-center">

@@ -72,10 +72,13 @@ export async function searchPexels({ query, orientation, count = 40, key }) {
 }
 
 /**
+ * `orientation` is accepted for parity with the Pexels adapter but ignored —
+ * see the note on aspect_ratio below.
+ *
  * @param {{ query: string, orientation?: string, count?: number }} opts
  * @returns {Promise<Candidate[]>}
  */
-export async function searchOpenverse({ query, orientation, count = 40 }) {
+export async function searchOpenverse({ query, count = 40 }) {
   const url = new URL('https://api.openverse.org/v1/images/')
   url.searchParams.set('q', query)
   // CC0 and public domain, plus CC-BY. Attribution is generated automatically

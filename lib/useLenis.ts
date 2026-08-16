@@ -41,15 +41,22 @@ export function useLenis() {
     syncGSAP()
 
     // Standalone RAF loop — ONLY if GSAP isn't driving Lenis
+    let frame = 0
+
     function raf(time: number) {
       if (!gsapAvailable) {
         lenis.raf(time)
       }
-      requestAnimationFrame(raf)
+      frame = requestAnimationFrame(raf)
     }
-    requestAnimationFrame(raf)
+    frame = requestAnimationFrame(raf)
 
     return () => {
+      // Cancel the loop before destroying Lenis. Without this the callback
+      // keeps running every frame for the life of the document, calling into
+      // a destroyed instance — which a Fast Refresh in development turns into
+      // a pile of orphaned loops.
+      cancelAnimationFrame(frame)
       lenis.destroy()
       lenisInstance = null
     }

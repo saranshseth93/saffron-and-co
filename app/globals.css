@@ -7,9 +7,13 @@
   --color-bg-warm: #241E16;
   --color-text-cream: #F5EDE0;
   --color-text-spice: #C4A882;
-  --color-text-muted: #7A6E60;
+  /* Lightened from #7A6E60 (3.98:1 on the deep ground), which failed WCAG AA
+     for body text. Now clears 4.5:1 on both dark surfaces. */
+  --color-text-muted: #968A78;
   --color-accent-turmeric: #E8A838;
-  --color-accent-chilli: #C73E1D;
+  /* Lightened from #C73E1D (3.89:1). Used for small uppercase mono labels,
+     which is exactly where a weak red is hardest to read. */
+  --color-accent-chilli: #EA6440;
   --color-accent-sage: #7B8F6A;
   --color-border: #2E2820;
 

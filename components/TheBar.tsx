@@ -47,7 +47,7 @@ export function TheBar() {
 
         <ul className="mt-10 lg:columns-2 lg:gap-12 [&>li]:break-inside-avoid">
           {barSection.dishes.map((dish) => (
-            <DishRow key={dish.name} dish={dish} />
+            <DishRow key={dish.name} dish={dish} headingLevel={3} />
           ))}
         </ul>
 

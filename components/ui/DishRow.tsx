@@ -6,15 +6,27 @@ import type { MenuDish } from '@/lib/constants'
  * Deliberately a server component with no motion. A menu is thirty-odd rows,
  * and animating each one individually is how a page ends up janky on a phone.
  */
-export function DishRow({ dish }: { dish: MenuDish }) {
+export function DishRow({
+  dish,
+  headingLevel = 4,
+}: {
+  dish: MenuDish
+  /**
+   * Menu nests these under a course heading (h2 → h3 → h4), but The Bar lists
+   * them straight under its section heading, where an h4 would skip a level.
+   */
+  headingLevel?: 3 | 4
+}) {
+  const Heading = `h${headingLevel}` as 'h3' | 'h4'
+
   return (
     // Every row keeps its rule: in a two-column list, `last:` would strip the
     // border from one column's final row and not the other's.
     <li className="group py-4 border-b border-border/60">
       <div className="flex items-baseline gap-3">
-        <h4 className="font-playfair text-lg text-text-cream leading-snug">
+        <Heading className="font-playfair text-lg text-text-cream leading-snug">
           {dish.name}
-        </h4>
+        </Heading>
 
         {dish.dietary?.length ? (
           <span className="flex gap-1 shrink-0" aria-hidden="true">

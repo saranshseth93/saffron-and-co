@@ -1,5 +1,3 @@
-import { Instagram, Facebook } from 'lucide-react'
-
 export function Footer() {
   return (
     <footer aria-label="Footer" className="bg-bg-deep pt-20 pb-10 px-6">
@@ -11,25 +9,12 @@ export function Footer() {
         {/* Tagline */}
         <p className="font-dm-sans text-text-spice italic mt-2">Where chai meets Melbourne.</p>
 
-        {/* Social row */}
-        <div className="flex items-center gap-4 mt-6">
-          <a
-            href="https://instagram.com/saffronandco"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            className="cursor-pointer"
-          >
-            <Instagram size={20} className="text-text-muted hover:text-text-cream transition-colors" />
-          </a>
-          <a
-            href="#"
-            aria-label="Facebook"
-            className="cursor-pointer"
-          >
-            <Facebook size={20} className="text-text-muted hover:text-text-cream transition-colors" />
-          </a>
-        </div>
+        {/*
+          No social row. The Instagram icon pointed at instagram.com/saffronandco
+          — a real handle belonging to someone else, under a fictional café's
+          branding — and the Facebook one went nowhere at all. This is the same
+          reason the fake Instagram strip was cut from the page body.
+        */}
 
         {/* Credits */}
         <div className="mt-10 space-y-1">

@@ -66,7 +66,7 @@ export function Navigation() {
       {/* Fixed header bar */}
       <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 lg:px-12 py-6">
         <a
-          href="#"
+          href="#top"
           className="font-oi text-text-cream tracking-[0.05em] text-lg lg:text-xl cursor-pointer"
         >
           Saffron &amp; Co

@@ -84,6 +84,7 @@ export function Hero() {
 
   return (
     <section
+      id="top"
       ref={sectionRef}
       className="relative min-h-screen flex flex-col items-center justify-center bg-bg-deep px-6"
     >

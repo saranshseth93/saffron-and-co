@@ -67,7 +67,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add images.lock.json CREDITS.md
           git commit -m "chore(images): update pinned photos and credits"
-          git push
+          # Another run may have pushed since this one checked out. Rebase
+          # and retry; if it still will not land, warn and carry on. The pins
+          # are already baked into this run's build, so the deploy is valid
+          # either way and failing here would block a good site over a
+          # bookkeeping commit.
+          git push || {
+            git pull --rebase --autostash
+            git push || echo "::warning::Could not push updated pins; the deploy continues."
+          }
 
       - run: pnpm build
 

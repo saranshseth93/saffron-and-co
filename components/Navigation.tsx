@@ -64,7 +64,13 @@ export function Navigation() {
   return (
     <>
       {/* Fixed header bar */}
-      <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 lg:px-12 py-6">
+      {/*
+        The bar needs its own background. It is fixed, so without one the page
+        scrolls straight through it — menu rows were running across the
+        wordmark. Translucent rather than solid so it still reads as an
+        overlay on the hero, where there is nothing behind it to hide.
+      */}
+      <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 lg:px-12 py-6 bg-bg-deep/90 backdrop-blur-md">
         <a
           href="#top"
           className="font-oi text-text-cream tracking-[0.05em] text-lg lg:text-xl cursor-pointer"

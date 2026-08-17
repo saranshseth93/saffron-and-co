@@ -27,6 +27,16 @@
   --animate-bounce-down: bounceDown 2s ease-in-out infinite;
 }
 
+/*
+ * Height of the fixed site header, measured at both breakpoints (py-6 plus a
+ * text-lg/text-xl line comes to 76px either way). The menu's section nav
+ * sticks to this rather than to 0 — at 0 it slides under the header and the
+ * two sets of labels sit on top of each other.
+ */
+:root {
+  --header-h: 76px;
+}
+
 @keyframes clipReveal {
   from {
     clip-path: inset(100% 0 0 0);

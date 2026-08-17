@@ -41,7 +41,7 @@ export function MenuNav({
   return (
     <nav
       aria-label="Menu sections"
-      className="sticky top-0 z-30 -mx-6 px-6 py-3 bg-bg-deep/85 backdrop-blur-md border-b border-border/60"
+      className="sticky top-[var(--header-h)] z-30 -mx-6 px-6 py-3 bg-bg-deep/95 backdrop-blur-md border-b border-border/60"
     >
       <ul className="flex gap-2 overflow-x-auto scrollbar-none max-w-6xl mx-auto">
         {sections.map((section) => {

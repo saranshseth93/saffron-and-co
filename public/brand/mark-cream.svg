@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Saffron &amp; Co">
+  <title>Saffron &amp; Co</title>
+  <!--
+    Three threads on a stem. Saffron is the stigma of the crocus, which grows as
+    exactly three deep-red threads above a yellow style — so the mark is the
+    thing itself, not a decorative flourish.
+
+    Each thread is narrow at the base and flares at the tip, which is how the
+    stigma actually grows and what stops the mark reading as a trident. Drawn as
+    filled paths, never <text>: the previous mark set an "S" in Georgia inside an
+    SVG, so it rendered differently on every machine and was unusable in print.
+  -->
+  <g fill="#F5EDE0">
+    <path d="M31 49C31 36 30 22 30.2 12.5c0-3.6 4.6-3.6 4.2 0C33.8 22 33 36 33 49Z"/>
+    <path d="M30.4 49C29 38 25 28.5 17.2 19.6c-2.4-2.7 1.2-6 3.2-3.4C27.2 25 31.8 37 32.4 49Z"/>
+    <path d="M33.6 49C35 38 39 28.5 46.8 19.6c2.4-2.7-1.2-6-3.2-3.4C36.8 25 32.2 37 31.6 49Z"/>
+  </g>
+  <!-- The style: yellow below, red above, as it grows. -->
+  <path d="M30.9 48h2.2c.5 0 .8.4.7.9l-1 8.4c-.1.9-1.4.9-1.5 0l-1-8.4c-.1-.5.2-.9.6-.9Z" fill="#F5EDE0"/>
+</svg>

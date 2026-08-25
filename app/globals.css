@@ -196,3 +196,44 @@ p {
     box-shadow: 0 18px 40px -18px rgb(12 10 8 / 0.9);
   }
 }
+
+/* ─── Printed menu ────────────────────────────────────────────────────────
+   Menus get printed. One that only exists on a screen is not a menu, so the
+   /menu page has to come out of an office printer looking deliberate.
+
+   Scoped to .menu-doc so nothing here affects the rest of the site. The dark
+   brand inverts to ink-on-paper: printing a near-black page wastes a cartridge
+   and reads grey. Prices stay in the mono face so the column still aligns.   */
+@media print {
+  .menu-doc {
+    background: #fff !important;
+    color: #14110d !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+    font-size: 10.5pt;
+  }
+
+  .menu-doc .no-print { display: none !important; }
+
+  /* Everything the dark theme coloured has to be re-grounded for paper. */
+  .menu-doc :is(h1, h2, p, li, span, abbr) { color: #14110d !important; }
+  .menu-doc .text-text-spice { color: #4a4238 !important; }
+  .menu-doc .text-text-muted { color: #6b6155 !important; }
+  .menu-doc .text-accent-turmeric { color: #14110d !important; }
+  .menu-doc .text-accent-sage { color: #55613f !important; }
+  .menu-doc :is(.border-border, .border-t, .border-b) { border-color: #cfc7b8 !important; }
+  .menu-doc .bg-bg-rich { background: #f7f3ea !important; }
+
+  /* Keep a dish and its description together, and never orphan a heading. */
+  .menu-doc .dish { break-inside: avoid; padding-block: 0.34rem; }
+  .menu-doc :is(h1, h2) { break-after: avoid; }
+  .menu-doc .menu-section { break-inside: auto; margin-top: 1.6rem; }
+  .menu-doc .specials { break-inside: avoid; margin-top: 1.2rem; }
+  .menu-doc .menu-legend { break-before: avoid; margin-top: 1.4rem; }
+
+  /* The mark is the only ink-heavy element worth keeping. */
+  /* Greyscaling an orange mark yields near-white on paper, so darken it too. */
+  .menu-doc img { filter: grayscale(1) brightness(0.32) contrast(1.6); }
+
+  @page { size: A4; margin: 14mm 15mm; }
+}

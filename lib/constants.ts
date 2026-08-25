@@ -292,6 +292,49 @@ export const featureDishes: MenuDish[] = menu
   .flatMap((section) => section.dishes)
   .filter((dish) => dish.slot)
 
+/**
+ * The board that changes.
+ *
+ * This is the whole argument for the menu care plan. The rest of the menu turns
+ * over slowly; this turns over weekly, and it is why a venue ends up rebuilding
+ * its own menu in Canva by March. Editing it here updates the menu page and the
+ * printable insert together — the service demonstrated rather than described.
+ */
+export interface Specials {
+  /** Printed on the insert, so staff can spot a stale board on the counter. */
+  weekOf: string
+  note: string
+  dishes: MenuDish[]
+}
+
+export const specials: Specials = {
+  weekOf: '25 August',
+  note: 'Written Monday, cooked till it runs out. Ask about the fish, it changes with the market.',
+  dishes: [
+    {
+      name: 'Green Mango & Snapper Ceviche',
+      description:
+        'Line-caught snapper, green mango, coconut, curry leaf oil. Cold, sharp, ten minutes to make.',
+      price: '24',
+      dietary: ['gf'],
+    },
+    {
+      name: 'Beetroot & Peanut Poriyal',
+      description:
+        'Roasted beetroot, crushed peanuts, mustard seed, fresh coconut. Side, or a small plate on its own.',
+      price: '14',
+      dietary: ['vg', 'gf', 'n'],
+    },
+    {
+      name: 'Kaju Katli Cheesecake',
+      description:
+        'Cashew fudge folded through baked cheesecake, cardamom crumb. Made Sunday, gone by Thursday.',
+      price: '16',
+      dietary: ['v', 'n'],
+    },
+  ],
+}
+
 export const introParagraphs: string[] = [
   'We didn’t open Saffron & Co because Melbourne needed another café. We opened it because we were tired of choosing between our cultures.',
   'This is where your amma’s chai recipe meets single-origin Melbourne coffee. Where masala scrambled eggs sit next to smashed avo. Where a dosa can be your Tuesday breakfast and nobody thinks that’s unusual.',

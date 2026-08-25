@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export function Footer() {
   return (
     <footer aria-label="Footer" className="bg-bg-deep pt-20 pb-10 px-6">
@@ -15,6 +17,26 @@ export function Footer() {
           branding — and the Facebook one went nowhere at all. This is the same
           reason the fake Instagram strip was cut from the page body.
         */}
+
+        {/*
+          The full menu and the brand system are separate pages. Without links
+          they are orphans — unreachable by a visitor and uncrawled — which
+          defeats the point of building them as portfolio pieces.
+        */}
+        <div className="mt-10 flex flex-wrap justify-center gap-x-5 gap-y-2">
+          <Link
+            href="/menu"
+            className="font-dm-sans text-[13px] text-accent-turmeric hover:underline cursor-pointer"
+          >
+            Full menu
+          </Link>
+          <Link
+            href="/brand"
+            className="font-dm-sans text-[13px] text-accent-turmeric hover:underline cursor-pointer"
+          >
+            Brand system
+          </Link>
+        </div>
 
         {/* Credits */}
         <div className="mt-10 space-y-1">

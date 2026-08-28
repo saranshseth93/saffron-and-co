@@ -1,7 +1,7 @@
 # Saffron & Co
 
 A **fictional** Indian-fusion café in Fitzroy, Melbourne, designed and built by
-[Pixel Pundit](https://pixelpundit.com.au) as a portfolio spec piece.
+[Pixel Pundit](https://pixelpundit.dev) as a portfolio spec piece.
 
 Saffron & Co is not a real business. The menu, prices, people, phone number and
 address are illustrative. There are no real reviews, awards, press mentions or

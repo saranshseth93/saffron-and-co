@@ -1,8 +1,8 @@
 import { specNotice } from '@/lib/constants'
 
 /**
- * Permanent, non-dismissible. Saffron & Co is a spec build, and a visitor
- * should know that before they read a price or dial the phone number.
+ * Permanent, non-dismissible. A visitor should know this is an example site
+ * before they read a price or dial the phone number.
  */
 export function SpecNoticeBar() {
   return (
@@ -10,14 +10,13 @@ export function SpecNoticeBar() {
       <p className="max-w-6xl mx-auto px-6 py-2 font-space-mono text-[11px] sm:text-xs tracking-wide text-center">
         <span className="font-semibold uppercase">{specNotice.short}</span>
         <span className="hidden sm:inline">
-          {' '}— a spec build by{' '}
+          {' '}— {specNotice.bar}{' '}
           <a
             href={specNotice.studioUrl}
             className="underline underline-offset-2 hover:opacity-70 transition-opacity"
           >
             {specNotice.studio}
           </a>
-          . Nothing here is a real café.
         </span>
       </p>
     </div>
@@ -38,12 +37,31 @@ export function SpecNoticeFooter() {
           {specNotice.long}
         </p>
         <p className="font-dm-sans text-sm text-text-muted leading-relaxed mt-4">
-          Photography is royalty-free and credited in{' '}
+          {specNotice.honesty}
+        </p>
+
+        <div className="mt-10 border-t border-border pt-8">
+          <p className="font-playfair text-lg text-text-cream">
+            {specNotice.ctaLabel}
+          </p>
+          <p className="font-dm-sans text-sm text-text-muted leading-relaxed mt-2">
+            {specNotice.ctaText}
+          </p>
           <a
-            href="https://github.com/saranshseth93/saffron-and-co/blob/master/CREDITS.md"
+            href={specNotice.ctaHref}
+            className="mt-5 inline-block bg-accent-turmeric px-6 py-3 font-space-mono text-[11px] uppercase tracking-[0.18em] text-bg-deep hover:brightness-110 transition"
+          >
+            {specNotice.ctaButton}
+          </a>
+        </div>
+
+        <p className="font-dm-sans text-sm text-text-muted leading-relaxed mt-8">
+          Photography is royalty-free and{' '}
+          <a
+            href={specNotice.creditsUrl}
             className="text-text-spice underline underline-offset-4 hover:text-text-cream transition-colors"
           >
-            CREDITS.md
+            credited here
           </a>
           . Built by{' '}
           <a

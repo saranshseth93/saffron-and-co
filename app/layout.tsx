@@ -5,7 +5,7 @@ import './globals.css'
 
 const title = 'Saffron & Co — Indian-Fusion Café & Bar (Demo Site)'
 const description =
-  'Where chai meets Melbourne. A fictional Fitzroy café, designed and built by Pixel Pundit as a portfolio piece. Not a real business.'
+  'Where chai meets Melbourne. A made-up Fitzroy café, built by Pixel Pundit to show the kind of site we make. Not a real business.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://saffronand.co'),

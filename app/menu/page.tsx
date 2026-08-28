@@ -177,7 +177,7 @@ export default function MenuPage() {
             <a href="https://pixelpundit.dev" className="text-accent-turmeric underline underline-offset-4">
               Pixel Pundit
             </a>{' '}
-            as a portfolio piece. Nothing here is for sale.
+            to show the kind of work we make. Nothing here is for sale.
           </p>
         </footer>
       </div>

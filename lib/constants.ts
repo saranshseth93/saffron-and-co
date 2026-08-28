@@ -395,9 +395,23 @@ export const navLinks: { label: string; href: string }[] = [
  * Saffron & Co is not a real business. This notice is rendered on the page and
  * in the document metadata so the site can never be mistaken for one.
  */
+// Written for the person this site is meant to impress: a café owner, not a
+// developer. "Spec build" and "portfolio piece" are industry words that mean
+// nothing outside the industry, so they are gone. The notice answers the three
+// things a real visitor actually wants to know — is this a real business, why
+// does it exist, and can I get one.
 export const specNotice = {
-  short: 'Demo site · fictional business',
-  long: 'Saffron & Co is a fictional café, designed and built by Pixel Pundit as a portfolio piece. The menu, prices, people, phone number and address are illustrative. It is not a trading business, and no reviews, awards, press coverage or customer numbers are claimed.',
+  short: 'Example site — not a real business',
+  bar: 'Saffron & Co is made up. This site is an example of what we build.',
+  long: "Saffron & Co isn't a real café. We invented it so we'd have something honest to show you — a complete, working website, built exactly the way we'd build yours. The menu, prices, people, phone number and address on it are all made up.",
+  honesty:
+    "You won't find reviews, star ratings, awards, press coverage or customer numbers anywhere on this site. A made-up business has nothing real to count, and inventing those is the one thing we won't do.",
+  ctaLabel: 'Want one for your business?',
+  ctaText: 'Every price is published on our site. No quotes on request.',
+  ctaHref: 'https://pixelpundit.dev/#pricing',
+  ctaButton: 'See what one costs',
   studio: 'Pixel Pundit',
-  studioUrl: 'https://pixelpundit.com.au',
+  studioUrl: 'https://pixelpundit.dev',
+  creditsUrl:
+    'https://github.com/saranshseth93/saffron-and-co/blob/master/CREDITS.md',
 }

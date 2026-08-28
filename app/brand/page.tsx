@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Brand System — Saffron & Co (Demo)',
   description:
-    'The identity behind Saffron & Co: mark, palette, type and usage. A portfolio piece by Pixel Pundit for a fictional café.',
+    'The identity behind Saffron & Co: mark, palette, type and usage. An example built by Pixel Pundit for a café that does not exist.',
 }
 
 /*
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
  * This page exists because the studio sells brand and graphic design but had
  * published work for websites only. Saffron & Co is fictional, so its identity
  * can be extended into a full system without inventing a client relationship —
- * the spec-build notice on every other page applies here too.
+ * the example-site notice on every other page applies here too.
  *
  * Nothing here is a mockup. The hexes are the CSS custom properties in
  * globals.css and the typefaces are the ones loaded in lib/fonts.ts, so the

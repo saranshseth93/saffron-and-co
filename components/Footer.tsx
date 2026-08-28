@@ -21,7 +21,7 @@ export function Footer() {
         {/*
           The full menu and the brand system are separate pages. Without links
           they are orphans — unreachable by a visitor and uncrawled — which
-          defeats the point of building them as portfolio pieces.
+          defeats the point of building them as examples of the work.
         */}
         <div className="mt-10 flex flex-wrap justify-center gap-x-5 gap-y-2">
           <Link
